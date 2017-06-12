@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>ZXWalk</title>
+  <subtitle>不忘初心 方得始终</subtitle>
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="https://markdownimages.github.io/"/>
+  <updated>2017-06-12T05:38:49.099Z</updated>
+  <id>https://markdownimages.github.io/</id>
+  
+  <author>
+    <name>祥子</name>
+    
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Hello World</title>
+    <link href="https://markdownimages.github.io/2017/06/12/hello-world/"/>
+    <id>https://markdownimages.github.io/2017/06/12/hello-world/</id>
+    <published>2017-06-12T05:38:49.099Z</published>
+    <updated>2017-06-12T05:38:49.099Z</updated>
+    
+    <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Ubuntu安装常用软件</title>
+    <link href="https://markdownimages.github.io/2017/06/10/Ubuntu%E5%AE%89%E8%A3%85%E5%B8%B8%E7%94%A8%E8%BD%AF%E4%BB%B6/"/>
+    <id>https://markdownimages.github.io/2017/06/10/Ubuntu安装常用软件/</id>
+    <published>2017-06-10T13:21:31.000Z</published>
+    <updated>2017-06-12T13:28:20.125Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="Ubuntu安装常用软件"><a href="#Ubuntu安装常用软件" class="headerlink" title="Ubuntu安装常用软件"></a>Ubuntu安装常用软件</h1><h2 id="安装软件"><a href="#安装软件" class="headerlink" title="安装软件"></a>安装软件</h2><h3 id="1-安装搜狗输入法"><a href="#1-安装搜狗输入法" class="headerlink" title="1.安装搜狗输入法"></a>1.安装搜狗输入法</h3><p>Linux版的搜狗输入法和Fcitx有冲突，在安装前移除fcitx：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">//这里的命令就是*</div><div class="line">sudo apt remove fcitx*</div><div class="line">sudo apt autoremove</div></pre></td></tr></table></figure></p>
+<p>下载安装包，搜狗提供32位和64位版：<a href="http://pinyin.sogou.com/linux/?r=pinyin" target="_blank" rel="external">http://pinyin.sogou.com/linux/?r=pinyin</a></p>
+<p>可以直接双击下载的deb包安装，或执行命令：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">sudo dpkg -i sogoupinyin*.deb</div><div class="line">sudo apt -f install</div></pre></td></tr></table></figure></p>
+<p>安装完成之后，重启系统。</p>
+<h3 id="2-安装git"><a href="#2-安装git" class="headerlink" title="2.安装git"></a>2.安装git</h3><p>安装配置git服务器：<br>（1）安装ssh：<code>sudo apt-get install openssh-server openssh-client</code><br>（2）启动ssh服务：<code>sudo /etc/init.d/ssh restart</code><br>（3）安装git服务器：<code>sudo apt-get install git-core</code></p>
+<p>配置ssh公钥<br>（1）本地生成ssh公钥：<code>ssh-keygen -C &#39;你的邮箱地址&#39; -t rsa</code>。</p>
+<blockquote>
+<p>NOTE<br>这条命令会在当前用户目录<code>~/.ssh/</code>下生成密钥文件。<br> (2) 查看ssh key，可以使用<code>cat ~/.ssh/id_rsa.pub</code>命令。</p>
+</blockquote>
+<p>每次提交都输入密码的解决办法<br>（1）cd 回车；进入当前用户目录下；<br>（2）<code>vim .git-credentials</code> （如果没有安装vim 用其它编辑器也可以或 sudo apt-get install vim 安装一个）<br>（3）按照以下格式输入内容：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">//其中username，password，github.com 都换成你自己的内容</div><div class="line">https://&#123;username&#125;：&#123;password&#125;@github.com</div></pre></td></tr></table></figure></p>
+<p>（4）保存退出后执行下面命令<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git config --global credential.helper store</div></pre></td></tr></table></figure></p>
+<h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><p><a href="http://blog.topspeedsnail.com/archives/6955" target="_blank" rel="external">Ubuntu 16.04安装搜狗输入法</a><br><a href="http://www.linuxidc.com/Linux/2016-12/137911.htm" target="_blank" rel="external">git安装</a><br><a href="http://www.xitongzhijia.net/xtjc/20160318/69233.html" target="_blank" rel="external">Ubuntu系统中git每次提交都要输入密码怎么办？</a></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;Ubuntu安装常用软件&quot;&gt;&lt;a href=&quot;#Ubuntu安装常用软件&quot; class=&quot;headerlink&quot; title=&quot;Ubuntu安装常用软件&quot;&gt;&lt;/a&gt;Ubuntu安装常用软件&lt;/h1&gt;&lt;h2 id=&quot;安装软件&quot;&gt;&lt;a href=&quot;#安装软件&quot; cla
+    
+    </summary>
+    
+      <category term="Linux" scheme="https://markdownimages.github.io/categories/Linux/"/>
+    
+    
+      <category term="Linux" scheme="https://markdownimages.github.io/tags/Linux/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Ubuntu使用过程中遇到的问题</title>
+    <link href="https://markdownimages.github.io/2017/06/08/Ubuntu%E4%BD%BF%E7%94%A8%E8%BF%87%E7%A8%8B%E4%B8%AD%E9%81%87%E5%88%B0%E7%9A%84%E9%97%AE%E9%A2%98/"/>
+    <id>https://markdownimages.github.io/2017/06/08/Ubuntu使用过程中遇到的问题/</id>
+    <published>2017-06-08T13:21:31.000Z</published>
+    <updated>2017-06-12T13:26:25.558Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="Ubuntu使用过程中遇到的问题"><a href="#Ubuntu使用过程中遇到的问题" class="headerlink" title="Ubuntu使用过程中遇到的问题"></a>Ubuntu使用过程中遇到的问题</h1><p>​</p>
+<h2 id="遇到的坑"><a href="#遇到的坑" class="headerlink" title="遇到的坑"></a>遇到的坑</h2><h3 id="1-网线已经连接，ip也配置好了，但是无法上网。"><a href="#1-网线已经连接，ip也配置好了，但是无法上网。" class="headerlink" title="1.网线已经连接，ip也配置好了，但是无法上网。"></a>1.网线已经连接，ip也配置好了，但是无法上网。</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">sudo sysctl net.ipv4.conf.default.rp_filter=0</div><div class="line">sudo sysctl net.ipv4.conf.all.rp_filter=0</div><div class="line">sudo sysctl net.ipv4.ip_forward=1</div><div class="line">sudo sysctl net.ipv6.conf.all.forwarding=1</div></pre></td></tr></table></figure>
+<p>或者直接追加到/etc/sysctl.conf</p>
+<p>如果遇到“设备未托管”，一般是台式机默认移动ip后禁用网络。<br>那么修改/etc/NetworkManager/NetworkManager.conf，设置managed=true,reboot</p>
+<p>有时候遇到即使改了上面四条仍旧无法连接网络，那么就是由于managed=true引起的，再改成false即可连接网页。</p>
+<h3 id="2-安装了搜狗输入法之后，无法输入特殊符号，例如按下shift-8打不出"><a href="#2-安装了搜狗输入法之后，无法输入特殊符号，例如按下shift-8打不出" class="headerlink" title="2.安装了搜狗输入法之后，无法输入特殊符号，例如按下shift+8打不出*"></a>2.安装了搜狗输入法之后，无法输入特殊符号，例如按下shift+8打不出*</h3><p>1.到搜狗输入法的设置面板<br>2.点击高级-&gt;打开Fcitx设置。<br>3.看一下除了搜狗输入法以外的另一个输入法是什么，如果是<code>键盘(汉语)</code>或者<code>键盘(英语)</code>直接点击左下角的<code>-</code>号删掉，新增一个<code>键盘(美国)</code>。<br>这样就可以了。</p>
+<h3 id="3-Ubuntu进入桌面后时不时闪屏"><a href="#3-Ubuntu进入桌面后时不时闪屏" class="headerlink" title="3.Ubuntu进入桌面后时不时闪屏"></a>3.Ubuntu进入桌面后时不时闪屏</h3><p>1.检查系统信息<br>首先，检查内核版本<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">uname -ra</div></pre></td></tr></table></figure></p>
+<p>发现我的内核版本是4.8<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">x86_64</div></pre></td></tr></table></figure></p>
+<p>表明系统是64位</p>
+<p>2.下载内核<br>去这个网站下载<a href="http://kernel.ubuntu.com/~kernel-ppa/mainline/v4.11/" target="_blank" rel="external">内核</a>，我的电脑是64位系统，下载amd64的文件，32位的系统下载i386的内核。</p>
+<p>3.安装内核<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo dpkg -i *.deb</div></pre></td></tr></table></figure></p>
+<p>4.重启系统<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">reboot</div></pre></td></tr></table></figure></p>
+<h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><p><a href="http://www.linuxdiyf.com/linux/13479.html" target="_blank" rel="external">ubuntu出现有线已连接却无法上网</a><br><a href="http://www.voidcn.com/blog/linxingqianglai/article/p-6081313.html" target="_blank" rel="external">ubuntu中shift键打不出特殊符号</a></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;Ubuntu使用过程中遇到的问题&quot;&gt;&lt;a href=&quot;#Ubuntu使用过程中遇到的问题&quot; class=&quot;headerlink&quot; title=&quot;Ubuntu使用过程中遇到的问题&quot;&gt;&lt;/a&gt;Ubuntu使用过程中遇到的问题&lt;/h1&gt;&lt;p&gt;​&lt;/p&gt;
+&lt;h2 id=&quot;
+    
+    </summary>
+    
+      <category term="Linux" scheme="https://markdownimages.github.io/categories/Linux/"/>
+    
+    
+      <category term="Linux" scheme="https://markdownimages.github.io/tags/Linux/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>ubuntu系统安装过程</title>
+    <link href="https://markdownimages.github.io/2017/06/07/ubuntu%E7%B3%BB%E7%BB%9F%E5%AE%89%E8%A3%85%E8%BF%87%E7%A8%8B/"/>
+    <id>https://markdownimages.github.io/2017/06/07/ubuntu系统安装过程/</id>
+    <published>2017-06-07T12:21:31.000Z</published>
+    <updated>2017-06-12T13:27:31.091Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="ubuntu系统安装过程"><a href="#ubuntu系统安装过程" class="headerlink" title="ubuntu系统安装过程"></a>ubuntu系统安装过程</h1><p>以下所有的安装都是基于奔着双系统安装的方法去的。</p>
+<h2 id="一、分区"><a href="#一、分区" class="headerlink" title="一、分区"></a>一、分区</h2><p>装Ubuntu分配的硬盘大小最好是(20G以上）不要太小，这里请注意，Ubuntu和Windows文件系统完全不同，所以我们划好要给Ubuntu的分区后，删除卷。到时候，安装好的ubuntu的分区，在Windows下是看不到的，但是进入Ubuntu是可以访问Windows的磁盘的。这才叫双系统的吧，和wubi那种可不一样哦。</p>
+<p>网上一搜就可以搜到怎么直接使用windows自带的磁盘工具完成分区的划分。这是网上的方法，本人亲测失败，还是用的屌屌的<a href="http://www.diskgenius.cn/" target="_blank" rel="external">diskgenius工具</a>完成。<br>具体步骤就不赘述了。</p>
+<blockquote>
+<p>NOTE<br>这边处理好之后 一定记得去磁盘管理那边将分区的部分<code>删掉卷</code>。</p>
+</blockquote>
+<h2 id="二、准备安装工具"><a href="#二、准备安装工具" class="headerlink" title="二、准备安装工具"></a>二、准备安装工具</h2><p>准备两个东西EasyBCD软件（<a href="http://linux.linuxidc.com/index.php?folder=cHViL7Oj08O5pL7fL0Vhc3lCQ0QgMi4zIMPit9HPwtTY" target="_blank" rel="external">EasyBCD 2.2</a> ）和ubuntu镜像（<a href="http://cn.ubuntu.com/download/" target="_blank" rel="external">Ubuntu 17.04版本</a>）。</p>
+<h3 id="1-EasyBCD配置"><a href="#1-EasyBCD配置" class="headerlink" title="1.EasyBCD配置"></a>1.EasyBCD配置</h3><p><strong>第1步</strong>打开EasyBCD软件，可以看到现在我们的计算机只有一个启动“入口”，我们来给他加一个，第一步选择添加新条目（添加移动入口点）<br><figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="https://raw.githubusercontent.com/MarkdownImages/MarkdownImages/master/%E6%95%99%E7%A8%8B/Ubuntu%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/12110319338232.png" alt="" title="">
+                </div>
+                <div class="image-caption"></div>
+            </figure></p>
+<p><strong>第2步</strong>选NeoGrub，第3步点安装点保存 ，接着是配置（第4步）<br><figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="https://raw.githubusercontent.com/MarkdownImages/MarkdownImages/master/%E6%95%99%E7%A8%8B/Ubuntu%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/12110319357200.png" alt="" title="">
+                </div>
+                <div class="image-caption"></div>
+            </figure></p>
+<p>然后就会出现一个menu.lst文件<br><figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="https://raw.githubusercontent.com/MarkdownImages/MarkdownImages/master/%E6%95%99%E7%A8%8B/Ubuntu%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/14041810078878.png" alt="" title="">
+                </div>
+                <div class="image-caption"></div>
+            </figure></p>
+<p>我们要编辑这个文件 因为系统就是这个文件找到我们的Ubuntu的。把下面的 英文 复制进去，把原来的全覆盖掉</p>
+<p>如果是32位的复制以下代码<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">title Install Ubuntu</div><div class="line">root (hd0,0)</div><div class="line">kernel (hd0,0)/vmlinuz boot=casper iso-scan/filename=/ubuntu-14.04-desktop-i386.iso ro quiet splash locale=zh_CN.UTF-8</div><div class="line">initrd (hd0,0)/initrd.lz</div></pre></td></tr></table></figure></p>
+<p>如果是64位的复制以下代码<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">title Install Ubuntu</div><div class="line">root (hd0,0)</div><div class="line">kernel (hd0,0)/vmlinuz.efi boot=casper iso-scan/filename=/ubuntu-14.04-desktop-i386.iso ro quiet splash locale=zh_CN.UTF-8</div><div class="line">initrd (hd0,0)/initrd.lz</div></pre></td></tr></table></figure></p>
+<p>区别就是第三行代码vmlinuz的尾缀。</p>
+<p>关闭 保存。</p>
+<p>说明：hd0表示c盘所处的硬盘号，一般电脑只有一个，所以都是hd0；如果有多个硬盘，则根据情况改为hd0、hd1等。<br>hd0后面的数字表示C盘在硬盘中的分区顺序，每个人的系统不大一样，不知道的可以在磁盘管理里面看一下，本人c盘是第三个分区，因此写为（hd0,2），如果是第一个，写为（hd0,0）即可。</p>
+<blockquote>
+<p>NOTE<br>ubuntu-14.04-desktop-i386.iso是你的iso的名字，别写成我的了，这个要改成你的。</p>
+</blockquote>
+<h3 id="1-iso镜像配置"><a href="#1-iso镜像配置" class="headerlink" title="1.iso镜像配置"></a>1.iso镜像配置</h3><p>下面把准备好的Ubuntu 14.04的iso镜像文件用压缩软件或者虚拟光驱打开，找到<code>casper</code>文件夹，把里面的<code>initrd.lz</code>和<code>vmlinuz</code>解压到C盘，然后在把整个iso文件复制到C盘根目录。</p>
+<blockquote>
+<p>NOTE<br>64位Ubuntu有细微的区别在于：</p>
+<ol>
+<li>vmlinuz这个文件，在64位iso里叫vmlinuz.efi，使用时把后缀去掉。</li>
+<li>用EasyBCD配置引导文件时，注意64位Win7采用的是GPT分区表，所以，C盘不是(hd0,0)而是(hd0,1)——前提是你只有一块硬盘或你把Win7装在了主硬盘上，如果是装在了第二块硬盘上，那么C盘是(hd1,1)，是1而不是0的原因：GPT分区表默认隐藏了一个系统保留分区，100M，所以你的C盘不在0区而在1区。</li>
+<li>64位Win7还会带来另一个问题，就是GPT分区的签名，如果不做任何处理，按照1+2两点你可以登入Ubuntu的体验版，但是通过桌面安装时，会发现在分区时无法识别你的Win7分区。所以还需要打开桌面安装前，打开终端，输入一行命令：<br>sudo dd if=/dev/zero of=/dev/sda bs=1 count=8 seek=512 目的是消除GPT分区表签名。</li>
+</ol>
+</blockquote>
+<h2 id="三、安装"><a href="#三、安装" class="headerlink" title="三、安装"></a>三、安装</h2><p>重启。你就会看到有2个启动菜单给你选择，我们选择 <code>NeoGrub 引导加载器</code> 这个选项</p>
+<h3 id="1-系统分区配置"><a href="#1-系统分区配置" class="headerlink" title="1.系统分区配置"></a>1.系统分区配置</h3><p><a href="https://github.com/MarkdownImages/MarkdownImages/blob/master/%E6%95%99%E7%A8%8B/Ubuntu%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/Windows10%2BUbuntu%E5%8F%8C%E7%B3%BB%E7%BB%9F%E5%AE%89%E8%A3%85%5B%E5%A4%9A%E5%9B%BE%5D%20-%20%E7%AE%80%E4%B9%A6.zip" target="_blank" rel="external">分区配置</a></p>
+<blockquote>
+<p>NOTE<br>这里如果遇到进行分区时无法新建分区，首先要看下主分区有多少个，如果主分区过多就会出现这样的问题，把没用的主分区删掉或者更换成逻辑分区可以解决这个问题。</p>
+</blockquote>
+<h3 id="2-安装中断"><a href="#2-安装中断" class="headerlink" title="2.安装中断"></a>2.安装中断</h3><p>安装过程一直显示<code>正在探测文件系统...</code>使ubuntu系统无法继续安装。</p>
+<p>解决方法：重启电脑，重新安装ubuntu之前，用“Ctrl+Alt+T”调出终端，然后运行<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo umount -l /isodevice</div></pre></td></tr></table></figure></p>
+<p>然后再安装系统就可以正常安装了。</p>
+<blockquote>
+<p>NOTE<br>上面这步操作是在Ubuntu试用版上操作的。</p>
+</blockquote>
+<h2 id="四、重启"><a href="#四、重启" class="headerlink" title="四、重启"></a>四、重启</h2><p>重启后发现windows中的启动管理界面没有Ubuntu的引导</p>
+<p>1.进入Ubuntu试用版环境<br>2.配置网络，联网<br>3.连接网络后我们打开终端，依次输入下面的内容，每行之后都要按回车<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">//第一行表示进入root账户模式</div><div class="line">sudo -i</div><div class="line">//第二行添加软件源并更新系统</div><div class="line">add-apt-repository ppa:yannubuntu/boot-repair &amp;&amp; apt-get update</div><div class="line">//第三行为安装boot-repair并在安装完成后启动软件</div><div class="line">apt-get install -y boot-repair &amp;&amp; boot-repair</div></pre></td></tr></table></figure></p>
+<p>4.弹窗修复工具以后<br>我们点击第一个选项Recommended repair（推荐方案），剩下的软件会自己操作，不需要人为干预，视电脑配置，花费的时间不等。<br>5.中间会有一些中断操作的步骤，需要根据指令进行相关配置，配置结束后重启电脑，就可以了。<br>6.重启试试，终于进入到ubuntu的桌面了。<br>7.重启进入桌面以后，我们再次打开终端，更新下grub，防止修复不完善。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo update-grub</div></pre></td></tr></table></figure></p>
+<p>最后，重启电脑确认下。或者根据自己的需求，进行下微调，都可以。</p>
+<h2 id="五、安装成功"><a href="#五、安装成功" class="headerlink" title="五、安装成功"></a>五、安装成功</h2><p>进入桌面以后就需要进行自己的一些配置了。</p>
+<h2 id="六、参考"><a href="#六、参考" class="headerlink" title="六、参考"></a>六、参考</h2><p><a href="http://www.linuxidc.com/Linux/2014-04/100369.htm" target="_blank" rel="external">Windows 7下硬盘安装Ubuntu 14.04图文教程</a><br><a href="http://jingyan.baidu.com/article/8ebacdf022413e49f65cd5d5.html" target="_blank" rel="external">Windows 7下硬盘安装Ubuntu14.04双系统的方法</a><br><a href="http://www.jianshu.com/p/2eebd6ad284d" target="_blank" rel="external">Ubuntu分区配置</a><br><a href="http://blog.csdn.net/hanshileiai/article/details/47071461" target="_blank" rel="external">ubuntu安装总是提示”正在探测文件系统”</a><br><a href="http://jingyan.baidu.com/article/5553fa82cd48a765a23934ae.html" target="_blank" rel="external">用Boot-repair修复双系统引导</a></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;ubuntu系统安装过程&quot;&gt;&lt;a href=&quot;#ubuntu系统安装过程&quot; class=&quot;headerlink&quot; title=&quot;ubuntu系统安装过程&quot;&gt;&lt;/a&gt;ubuntu系统安装过程&lt;/h1&gt;&lt;p&gt;以下所有的安装都是基于奔着双系统安装的方法去的。&lt;/p&gt;
+&lt;
+    
+    </summary>
+    
+      <category term="Linux" scheme="https://markdownimages.github.io/categories/Linux/"/>
+    
+    
+      <category term="Linux" scheme="https://markdownimages.github.io/tags/Linux/"/>
+    
+  </entry>
+  
+</feed>

@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+
+    
+
+    
+
+
+
+    <meta charset="utf-8">
+    
+    
+    
+    <title>ubuntu系统安装过程 | ZXWalk | 不忘初心 方得始终</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <meta name="theme-color" content="#FE5D4E">
+    
+    
+    <meta name="keywords" content="Linux">
+    <meta name="description" content="ubuntu系统安装过程以下所有的安装都是基于奔着双系统安装的方法去的。 一、分区装Ubuntu分配的硬盘大小最好是(20G以上）不要太小，这里请注意，Ubuntu和Windows文件系统完全不同，所以我们划好要给Ubuntu的分区后，删除卷。到时候，安装好的ubuntu的分区，在Windows下是看不到的，但是进入Ubuntu是可以访问Windows的磁盘的。这才叫双系统的吧，和wubi那种可不">
+<meta name="keywords" content="Linux">
+<meta property="og:type" content="article">
+<meta property="og:title" content="ubuntu系统安装过程">
+<meta property="og:url" content="https://markdownimages.github.io/2017/06/07/ubuntu系统安装过程/index.html">
+<meta property="og:site_name" content="ZXWalk">
+<meta property="og:description" content="ubuntu系统安装过程以下所有的安装都是基于奔着双系统安装的方法去的。 一、分区装Ubuntu分配的硬盘大小最好是(20G以上）不要太小，这里请注意，Ubuntu和Windows文件系统完全不同，所以我们划好要给Ubuntu的分区后，删除卷。到时候，安装好的ubuntu的分区，在Windows下是看不到的，但是进入Ubuntu是可以访问Windows的磁盘的。这才叫双系统的吧，和wubi那种可不">
+<meta property="og:image" content="https://raw.githubusercontent.com/MarkdownImages/MarkdownImages/master/%E6%95%99%E7%A8%8B/Ubuntu%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/12110319338232.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/MarkdownImages/MarkdownImages/master/%E6%95%99%E7%A8%8B/Ubuntu%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/12110319357200.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/MarkdownImages/MarkdownImages/master/%E6%95%99%E7%A8%8B/Ubuntu%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/14041810078878.png">
+<meta property="og:updated_time" content="2017-06-12T13:27:31.091Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="ubuntu系统安装过程">
+<meta name="twitter:description" content="ubuntu系统安装过程以下所有的安装都是基于奔着双系统安装的方法去的。 一、分区装Ubuntu分配的硬盘大小最好是(20G以上）不要太小，这里请注意，Ubuntu和Windows文件系统完全不同，所以我们划好要给Ubuntu的分区后，删除卷。到时候，安装好的ubuntu的分区，在Windows下是看不到的，但是进入Ubuntu是可以访问Windows的磁盘的。这才叫双系统的吧，和wubi那种可不">
+<meta name="twitter:image" content="https://raw.githubusercontent.com/MarkdownImages/MarkdownImages/master/%E6%95%99%E7%A8%8B/Ubuntu%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/12110319338232.png">
+    
+        <link rel="alternate" type="application/atom+xml" title="ZXWalk" href="/atom.xml">
+    
+    <link rel="shortcut icon" href="/img/favicon.ico">
+    <link rel="stylesheet" href="//unpkg.com/hexo-theme-material-indigo@latest/css/style.css">
+    <script>window.lazyScripts=[]</script>
+</head>
+
+<body>
+    <div id="loading" class="active"></div>
+
+    <aside id="menu" class="hide" >
+  <div class="inner flex-row-vertical">
+    <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
+        <i class="icon icon-lg icon-close"></i>
+    </a>
+    <div class="brand-wrap" style="background-image:url(/img/brand.jpg)">
+      <div class="brand">
+        <a href="/" class="avatar waves-effect waves-circle waves-light">
+          <img src="/img/avatar.jpg">
+        </a>
+        <hgroup class="introduce">
+          <h5 class="nickname">祥子</h5>
+          <a href="mailto:960376043@qq.com" title="960376043@qq.com" class="mail">960376043@qq.com</a>
+        </hgroup>
+      </div>
+    </div>
+    <div class="scroll-wrap flex-col">
+      <ul class="nav">
+        
+            <li class="waves-block waves-effect">
+              <a href="/"  >
+                <i class="icon icon-lg icon-home"></i>
+                主页
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/archives"  >
+                <i class="icon icon-lg icon-archives"></i>
+                归档
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/tags"  >
+                <i class="icon icon-lg icon-tags"></i>
+                标签
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/categories"  >
+                <i class="icon icon-lg icon-th-list"></i>
+                分类
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://github.com/XZwalk" target="_blank" >
+                <i class="icon icon-lg icon-github"></i>
+                Github
+              </a>
+            </li>
+        
+      </ul>
+    </div>
+  </div>
+</aside>
+
+    <main id="main">
+        <header class="top-header" id="header">
+    <div class="flex-row">
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
+          <i class="icon icon-lg icon-navicon"></i>
+        </a>
+        <div class="flex-col header-title ellipsis">ubuntu系统安装过程</div>
+        
+        <div class="search-wrap" id="search-wrap">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
+                <i class="icon icon-lg icon-chevron-left"></i>
+            </a>
+            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="输入感兴趣的关键字">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="search">
+                <i class="icon icon-lg icon-search"></i>
+            </a>
+        </div>
+        
+        
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menuShare">
+            <i class="icon icon-lg icon-share-alt"></i>
+        </a>
+        
+    </div>
+</header>
+<header class="content-header post-header">
+
+    <div class="container fade-scale">
+        <h1 class="title">ubuntu系统安装过程</h1>
+        <h5 class="subtitle">
+            
+                <time datetime="2017-06-07T12:21:31.000Z" itemprop="datePublished" class="page-time">
+  2017-06-07
+</time>
+
+
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/Linux/">Linux</a></li></ul>
+
+            
+        </h5>
+    </div>
+
+    
+
+
+</header>
+
+
+<div class="container body-wrap">
+    
+    <aside class="post-widget">
+        <nav class="post-toc-wrap" id="post-toc">
+            <h4>TOC</h4>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#ubuntu系统安装过程"><span class="post-toc-number">1.</span> <span class="post-toc-text">ubuntu系统安装过程</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#一、分区"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">一、分区</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#二、准备安装工具"><span class="post-toc-number">1.2.</span> <span class="post-toc-text">二、准备安装工具</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#1-EasyBCD配置"><span class="post-toc-number">1.2.1.</span> <span class="post-toc-text">1.EasyBCD配置</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#1-iso镜像配置"><span class="post-toc-number">1.2.2.</span> <span class="post-toc-text">1.iso镜像配置</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#三、安装"><span class="post-toc-number">1.3.</span> <span class="post-toc-text">三、安装</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#1-系统分区配置"><span class="post-toc-number">1.3.1.</span> <span class="post-toc-text">1.系统分区配置</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#2-安装中断"><span class="post-toc-number">1.3.2.</span> <span class="post-toc-text">2.安装中断</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#四、重启"><span class="post-toc-number">1.4.</span> <span class="post-toc-text">四、重启</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#五、安装成功"><span class="post-toc-number">1.5.</span> <span class="post-toc-text">五、安装成功</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#六、参考"><span class="post-toc-number">1.6.</span> <span class="post-toc-text">六、参考</span></a></li></ol></li></ol>
+        </nav>
+    </aside>
+    
+<article id="post-ubuntu系统安装过程"
+  class="post-article article-type-post fade" itemprop="blogPost">
+
+    <div class="post-card">
+        <h1 class="post-card-title">ubuntu系统安装过程</h1>
+        <div class="post-meta">
+            <time class="post-time" title="2017-06-07 20:21:31" datetime="2017-06-07T12:21:31.000Z"  itemprop="datePublished">2017-06-07</time>
+
+            
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/Linux/">Linux</a></li></ul>
+
+
+
+            
+<span id="busuanzi_container_page_pv" title="文章总阅读量" style='display:none'>
+    <i class="icon icon-eye icon-pr"></i><span id="busuanzi_value_page_pv"></span>
+</span>
+
+
+            
+
+        </div>
+        <div class="post-content" id="post-content" itemprop="postContent">
+            <h1 id="ubuntu系统安装过程"><a href="#ubuntu系统安装过程" class="headerlink" title="ubuntu系统安装过程"></a>ubuntu系统安装过程</h1><p>以下所有的安装都是基于奔着双系统安装的方法去的。</p>
+<h2 id="一、分区"><a href="#一、分区" class="headerlink" title="一、分区"></a>一、分区</h2><p>装Ubuntu分配的硬盘大小最好是(20G以上）不要太小，这里请注意，Ubuntu和Windows文件系统完全不同，所以我们划好要给Ubuntu的分区后，删除卷。到时候，安装好的ubuntu的分区，在Windows下是看不到的，但是进入Ubuntu是可以访问Windows的磁盘的。这才叫双系统的吧，和wubi那种可不一样哦。</p>
+<p>网上一搜就可以搜到怎么直接使用windows自带的磁盘工具完成分区的划分。这是网上的方法，本人亲测失败，还是用的屌屌的<a href="http://www.diskgenius.cn/" target="_blank" rel="external">diskgenius工具</a>完成。<br>具体步骤就不赘述了。</p>
+<blockquote>
+<p>NOTE<br>这边处理好之后 一定记得去磁盘管理那边将分区的部分<code>删掉卷</code>。</p>
+</blockquote>
+<h2 id="二、准备安装工具"><a href="#二、准备安装工具" class="headerlink" title="二、准备安装工具"></a>二、准备安装工具</h2><p>准备两个东西EasyBCD软件（<a href="http://linux.linuxidc.com/index.php?folder=cHViL7Oj08O5pL7fL0Vhc3lCQ0QgMi4zIMPit9HPwtTY" target="_blank" rel="external">EasyBCD 2.2</a> ）和ubuntu镜像（<a href="http://cn.ubuntu.com/download/" target="_blank" rel="external">Ubuntu 17.04版本</a>）。</p>
+<h3 id="1-EasyBCD配置"><a href="#1-EasyBCD配置" class="headerlink" title="1.EasyBCD配置"></a>1.EasyBCD配置</h3><p><strong>第1步</strong>打开EasyBCD软件，可以看到现在我们的计算机只有一个启动“入口”，我们来给他加一个，第一步选择添加新条目（添加移动入口点）<br><figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="https://raw.githubusercontent.com/MarkdownImages/MarkdownImages/master/%E6%95%99%E7%A8%8B/Ubuntu%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/12110319338232.png" alt="" title="">
+                </div>
+                <div class="image-caption"></div>
+            </figure></p>
+<p><strong>第2步</strong>选NeoGrub，第3步点安装点保存 ，接着是配置（第4步）<br><figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="https://raw.githubusercontent.com/MarkdownImages/MarkdownImages/master/%E6%95%99%E7%A8%8B/Ubuntu%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/12110319357200.png" alt="" title="">
+                </div>
+                <div class="image-caption"></div>
+            </figure></p>
+<p>然后就会出现一个menu.lst文件<br><figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="https://raw.githubusercontent.com/MarkdownImages/MarkdownImages/master/%E6%95%99%E7%A8%8B/Ubuntu%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/14041810078878.png" alt="" title="">
+                </div>
+                <div class="image-caption"></div>
+            </figure></p>
+<p>我们要编辑这个文件 因为系统就是这个文件找到我们的Ubuntu的。把下面的 英文 复制进去，把原来的全覆盖掉</p>
+<p>如果是32位的复制以下代码<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">title Install Ubuntu</div><div class="line">root (hd0,0)</div><div class="line">kernel (hd0,0)/vmlinuz boot=casper iso-scan/filename=/ubuntu-14.04-desktop-i386.iso ro quiet splash locale=zh_CN.UTF-8</div><div class="line">initrd (hd0,0)/initrd.lz</div></pre></td></tr></table></figure></p>
+<p>如果是64位的复制以下代码<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">title Install Ubuntu</div><div class="line">root (hd0,0)</div><div class="line">kernel (hd0,0)/vmlinuz.efi boot=casper iso-scan/filename=/ubuntu-14.04-desktop-i386.iso ro quiet splash locale=zh_CN.UTF-8</div><div class="line">initrd (hd0,0)/initrd.lz</div></pre></td></tr></table></figure></p>
+<p>区别就是第三行代码vmlinuz的尾缀。</p>
+<p>关闭 保存。</p>
+<p>说明：hd0表示c盘所处的硬盘号，一般电脑只有一个，所以都是hd0；如果有多个硬盘，则根据情况改为hd0、hd1等。<br>hd0后面的数字表示C盘在硬盘中的分区顺序，每个人的系统不大一样，不知道的可以在磁盘管理里面看一下，本人c盘是第三个分区，因此写为（hd0,2），如果是第一个，写为（hd0,0）即可。</p>
+<blockquote>
+<p>NOTE<br>ubuntu-14.04-desktop-i386.iso是你的iso的名字，别写成我的了，这个要改成你的。</p>
+</blockquote>
+<h3 id="1-iso镜像配置"><a href="#1-iso镜像配置" class="headerlink" title="1.iso镜像配置"></a>1.iso镜像配置</h3><p>下面把准备好的Ubuntu 14.04的iso镜像文件用压缩软件或者虚拟光驱打开，找到<code>casper</code>文件夹，把里面的<code>initrd.lz</code>和<code>vmlinuz</code>解压到C盘，然后在把整个iso文件复制到C盘根目录。</p>
+<blockquote>
+<p>NOTE<br>64位Ubuntu有细微的区别在于：</p>
+<ol>
+<li>vmlinuz这个文件，在64位iso里叫vmlinuz.efi，使用时把后缀去掉。</li>
+<li>用EasyBCD配置引导文件时，注意64位Win7采用的是GPT分区表，所以，C盘不是(hd0,0)而是(hd0,1)——前提是你只有一块硬盘或你把Win7装在了主硬盘上，如果是装在了第二块硬盘上，那么C盘是(hd1,1)，是1而不是0的原因：GPT分区表默认隐藏了一个系统保留分区，100M，所以你的C盘不在0区而在1区。</li>
+<li>64位Win7还会带来另一个问题，就是GPT分区的签名，如果不做任何处理，按照1+2两点你可以登入Ubuntu的体验版，但是通过桌面安装时，会发现在分区时无法识别你的Win7分区。所以还需要打开桌面安装前，打开终端，输入一行命令：<br>sudo dd if=/dev/zero of=/dev/sda bs=1 count=8 seek=512 目的是消除GPT分区表签名。</li>
+</ol>
+</blockquote>
+<h2 id="三、安装"><a href="#三、安装" class="headerlink" title="三、安装"></a>三、安装</h2><p>重启。你就会看到有2个启动菜单给你选择，我们选择 <code>NeoGrub 引导加载器</code> 这个选项</p>
+<h3 id="1-系统分区配置"><a href="#1-系统分区配置" class="headerlink" title="1.系统分区配置"></a>1.系统分区配置</h3><p><a href="https://github.com/MarkdownImages/MarkdownImages/blob/master/%E6%95%99%E7%A8%8B/Ubuntu%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/Windows10%2BUbuntu%E5%8F%8C%E7%B3%BB%E7%BB%9F%E5%AE%89%E8%A3%85%5B%E5%A4%9A%E5%9B%BE%5D%20-%20%E7%AE%80%E4%B9%A6.zip" target="_blank" rel="external">分区配置</a></p>
+<blockquote>
+<p>NOTE<br>这里如果遇到进行分区时无法新建分区，首先要看下主分区有多少个，如果主分区过多就会出现这样的问题，把没用的主分区删掉或者更换成逻辑分区可以解决这个问题。</p>
+</blockquote>
+<h3 id="2-安装中断"><a href="#2-安装中断" class="headerlink" title="2.安装中断"></a>2.安装中断</h3><p>安装过程一直显示<code>正在探测文件系统...</code>使ubuntu系统无法继续安装。</p>
+<p>解决方法：重启电脑，重新安装ubuntu之前，用“Ctrl+Alt+T”调出终端，然后运行<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo umount -l /isodevice</div></pre></td></tr></table></figure></p>
+<p>然后再安装系统就可以正常安装了。</p>
+<blockquote>
+<p>NOTE<br>上面这步操作是在Ubuntu试用版上操作的。</p>
+</blockquote>
+<h2 id="四、重启"><a href="#四、重启" class="headerlink" title="四、重启"></a>四、重启</h2><p>重启后发现windows中的启动管理界面没有Ubuntu的引导</p>
+<p>1.进入Ubuntu试用版环境<br>2.配置网络，联网<br>3.连接网络后我们打开终端，依次输入下面的内容，每行之后都要按回车<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">//第一行表示进入root账户模式</div><div class="line">sudo -i</div><div class="line">//第二行添加软件源并更新系统</div><div class="line">add-apt-repository ppa:yannubuntu/boot-repair &amp;&amp; apt-get update</div><div class="line">//第三行为安装boot-repair并在安装完成后启动软件</div><div class="line">apt-get install -y boot-repair &amp;&amp; boot-repair</div></pre></td></tr></table></figure></p>
+<p>4.弹窗修复工具以后<br>我们点击第一个选项Recommended repair（推荐方案），剩下的软件会自己操作，不需要人为干预，视电脑配置，花费的时间不等。<br>5.中间会有一些中断操作的步骤，需要根据指令进行相关配置，配置结束后重启电脑，就可以了。<br>6.重启试试，终于进入到ubuntu的桌面了。<br>7.重启进入桌面以后，我们再次打开终端，更新下grub，防止修复不完善。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo update-grub</div></pre></td></tr></table></figure></p>
+<p>最后，重启电脑确认下。或者根据自己的需求，进行下微调，都可以。</p>
+<h2 id="五、安装成功"><a href="#五、安装成功" class="headerlink" title="五、安装成功"></a>五、安装成功</h2><p>进入桌面以后就需要进行自己的一些配置了。</p>
+<h2 id="六、参考"><a href="#六、参考" class="headerlink" title="六、参考"></a>六、参考</h2><p><a href="http://www.linuxidc.com/Linux/2014-04/100369.htm" target="_blank" rel="external">Windows 7下硬盘安装Ubuntu 14.04图文教程</a><br><a href="http://jingyan.baidu.com/article/8ebacdf022413e49f65cd5d5.html" target="_blank" rel="external">Windows 7下硬盘安装Ubuntu14.04双系统的方法</a><br><a href="http://www.jianshu.com/p/2eebd6ad284d" target="_blank" rel="external">Ubuntu分区配置</a><br><a href="http://blog.csdn.net/hanshileiai/article/details/47071461" target="_blank" rel="external">ubuntu安装总是提示”正在探测文件系统”</a><br><a href="http://jingyan.baidu.com/article/5553fa82cd48a765a23934ae.html" target="_blank" rel="external">用Boot-repair修复双系统引导</a></p>
+
+        </div>
+
+        <blockquote class="post-copyright">
+    <div class="content">
+        
+<span class="post-time">
+    最后更新时间：<time datetime="2017-06-12T13:27:31.091Z" itemprop="dateUpdated">2017-06-12 21:27:31</time>
+</span><br>
+
+
+        
+        欢迎打赏！
+        
+    </div>
+    <footer>
+        <a href="https://markdownimages.github.io">
+            <img src="/img/avatar.jpg" alt="祥子">
+            祥子
+        </a>
+    </footer>
+</blockquote>
+
+        
+<div class="page-reward">
+    <a id="rewardBtn" href="javascript:;" class="page-reward-btn waves-effect waves-circle waves-light">赏</a>
+</div>
+
+
+
+        <div class="post-footer">
+            
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Linux/">Linux</a></li></ul>
+
+
+            
+<div class="page-share-wrap">
+    
+
+<div class="page-share" id="pageShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://markdownimages.github.io/2017/06/07/ubuntu系统安装过程/&title=《ubuntu系统安装过程》 — ZXWalk&pic=https://markdownimages.github.io/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://markdownimages.github.io/2017/06/07/ubuntu系统安装过程/&title=《ubuntu系统安装过程》 — ZXWalk&source=我是一只小小小小鸟......" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://markdownimages.github.io/2017/06/07/ubuntu系统安装过程/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《ubuntu系统安装过程》 — ZXWalk&url=https://markdownimages.github.io/2017/06/07/ubuntu系统安装过程/&via=https://markdownimages.github.io" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://markdownimages.github.io/2017/06/07/ubuntu系统安装过程/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+
+    <a href="javascript:;" id="shareFab" class="page-share-fab waves-effect waves-circle">
+        <i class="icon icon-share-alt icon-lg"></i>
+    </a>
+</div>
+
+
+
+        </div>
+    </div>
+
+    
+<nav class="post-nav flex-row flex-justify-between">
+  
+    <div class="waves-block waves-effect prev">
+      <a href="/2017/06/08/Ubuntu使用过程中遇到的问题/" id="post-prev" class="post-nav-link">
+        <div class="tips"><i class="icon icon-angle-left icon-lg icon-pr"></i> Prev</div>
+        <h4 class="title">Ubuntu使用过程中遇到的问题</h4>
+      </a>
+    </div>
+  
+
+  
+</nav>
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+<div id="reward" class="page-modal reward-lay">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <h3 class="reward-title">
+        <i class="icon icon-quote-left"></i>
+        谢谢大爷~
+        <i class="icon icon-quote-right"></i>
+    </h3>
+    <ul class="reward-items">
+        
+        <li>
+            <img src="/img/wechat.jpg" title="微信打赏二维码" alt="微信打赏二维码">
+            <p>微信</p>
+        </li>
+        
+
+        
+        <li>
+            <img src="/img/alipay.jpg" title="支付宝打赏二维码" alt="支付宝打赏二维码">
+            <p>支付宝</p>
+        </li>
+        
+    </ul>
+</div>
+
+
+
+</div>
+
+        <footer class="footer">
+    <div class="top">
+        
+<p>
+    <span id="busuanzi_container_site_uv" style='display:none'>
+        站点总访客数：<span id="busuanzi_value_site_uv"></span>
+    </span>
+    <span id="busuanzi_container_site_pv" style='display:none'>
+        站点总访问量：<span id="busuanzi_value_site_pv"></span>
+    </span>
+</p>
+
+
+        <p>
+            
+                <span><a href="/atom.xml" target="_blank" class="rss" title="rss"><i class="icon icon-lg icon-rss"></i></a></span>
+            
+            <span>博客内容遵循<a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">知识共享 署名 - 非商业性 - 相同方式共享 4.0 国际协议</a></span>
+        </p>
+    </div>
+    <div class="bottom">
+        <p>
+            <span>Power by <a href="http://hexo.io/" target="_blank">Hexo</a> Theme <a href="https://github.com/yscoder/hexo-theme-indigo" target="_blank">indigo</a></span>
+            <span>祥子 &copy; 2015 - 2017</span>
+        </p>
+    </div>
+</footer>
+
+    </main>
+    <div class="mask" id="mask"></div>
+<a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-chevron-up"></span></a>
+
+
+
+<div class="global-share" id="globalShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://markdownimages.github.io/2017/06/07/ubuntu系统安装过程/&title=《ubuntu系统安装过程》 — ZXWalk&pic=https://markdownimages.github.io/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://markdownimages.github.io/2017/06/07/ubuntu系统安装过程/&title=《ubuntu系统安装过程》 — ZXWalk&source=我是一只小小小小鸟......" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://markdownimages.github.io/2017/06/07/ubuntu系统安装过程/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《ubuntu系统安装过程》 — ZXWalk&url=https://markdownimages.github.io/2017/06/07/ubuntu系统安装过程/&via=https://markdownimages.github.io" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://markdownimages.github.io/2017/06/07/ubuntu系统安装过程/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+<div class="page-modal wx-share" id="wxShare">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAN4AAADeCAAAAAB3DOFrAAACoklEQVR42u3aS24CQQwFQO5/abLJjjB5ttt8pJoVCoRxdaTpzrNvt/i6P7mu3332yWe/9XjHx0/eNi48PDy8Q6UnN8hLvC49ry2vGQ8PD2+blxdxjbz+nmtGQsprxsPDw/scXl765N2cioeHh/ctvHkkUQ0g8PDw8D6NN49fe0fzPFZYz1rw8PDwYl7eRfqc1yv9PTw8PLxxVz154J5t/E82gz+qxcPDw1vg9eLU6jBBsjT5AEG1Tjw8PLwNXq/1VY1WexFGsqz5d+Lh4eGd4iW37DWiqutaDXOjzQAPDw/v5bxJe2z+bi+nxcPDw9vjJQMB+QBWPshVPuMnw1XJeR8PDw9vzJsMB/Ri3xxZjSH+qRMPDw9vjTdp8FebWNWDdR4oH+ih4eHh4RWbXvPjb/nIO0CW9z08PDy8AS8ZiuoFqdXotvrNUTiCh4eHt8bLN4Yk6t1uhiV/DDw8PLzX8KqF5qf16ghXvoWUAwg8PDy8Bd6k3LxBlQcQo/FWPDw8vAVeNULND7W9jSdvy5UHXvHw8PCO8nqjTvkRvBcrJIf4aBPCw8PDW+Dljfz89XzQqnc0L4ws4OHh4R3ilaPSOKjNG2m9e0URBh4eHt4ar3pgrf78bMpa3uvw8PDwjvJyanXbSBYujzaSLQcPDw9vj5eIewFE/rjPF6I5NICHh4e3zLsXr3kzrPe7eHh4eO/lVYec5oAkVmgGDXh4eHhrvHdtAHmrrLc0v6/x8PDwFni9Z2z+EJ9EsacGv/Dw8PA2eMlm0ItT87WsHuULYwp4eHh4a7y86TW/cTmKLR7K8fDw8D6ZV90Y8ngiiYPx8PDwvovXa31NNoNeTIyHh4e3x8vHm6qL0hu0OnYXPDw8vAXe5B/+ybhAr6BJWIyHh4c35v0A+5mmS4ROUbEAAAAASUVORK5CYII=" alt="微信分享二维码">
+</div>
+
+
+
+
+    <script src="//cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script>
+<script>
+var BLOG = { ROOT: '/', SHARE: true, REWARD: true };
+
+
+
+</script>
+
+<script src="//unpkg.com/hexo-theme-material-indigo@latest/js/main.min.js"></script>
+
+
+<div class="search-panel" id="search-panel">
+    <ul class="search-result" id="search-result"></ul>
+</div>
+<template id="search-tpl">
+<li class="item">
+    <a href="{path}" class="waves-block waves-effect">
+        <div class="title ellipsis" title="{title}">{title}</div>
+        <div class="flex-row flex-middle">
+            <div class="tags ellipsis">
+                {tags}
+            </div>
+            <time class="flex-col time">{date}</time>
+        </div>
+    </a>
+</li>
+</template>
+
+<script src="//unpkg.com/hexo-theme-material-indigo@latest/js/search.min.js" async></script>
+
+
+
+
+
+
+<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+
+
+</body>
+</html>
