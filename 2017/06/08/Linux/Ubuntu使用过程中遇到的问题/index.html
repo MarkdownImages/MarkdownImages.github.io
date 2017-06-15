@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+
+    
+
+    
+
+
+
+    <meta charset="utf-8">
+    
+    
+    
+    <title>Ubuntu使用过程中遇到的问题 | ZXWalk | 不忘初心 方得始终</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <meta name="theme-color" content="#FE5D4E">
+    
+    
+    <meta name="keywords" content="Linux">
+    <meta name="description" content="Ubuntu使用过程中遇到的问题​ 遇到的坑1.网线已经连接，ip也配置好了，但是无法上网。1234sudo sysctl net.ipv4.conf.default.rp_filter=0sudo sysctl net.ipv4.conf.all.rp_filter=0sudo sysctl net.ipv4.ip_forward=1sudo sysctl net.ipv6.conf.all.f">
+<meta name="keywords" content="Linux">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Ubuntu使用过程中遇到的问题">
+<meta property="og:url" content="https://markdownimages.github.io/2017/06/08/Linux/Ubuntu使用过程中遇到的问题/index.html">
+<meta property="og:site_name" content="ZXWalk">
+<meta property="og:description" content="Ubuntu使用过程中遇到的问题​ 遇到的坑1.网线已经连接，ip也配置好了，但是无法上网。1234sudo sysctl net.ipv4.conf.default.rp_filter=0sudo sysctl net.ipv4.conf.all.rp_filter=0sudo sysctl net.ipv4.ip_forward=1sudo sysctl net.ipv6.conf.all.f">
+<meta property="og:updated_time" content="2017-06-12T13:26:25.558Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Ubuntu使用过程中遇到的问题">
+<meta name="twitter:description" content="Ubuntu使用过程中遇到的问题​ 遇到的坑1.网线已经连接，ip也配置好了，但是无法上网。1234sudo sysctl net.ipv4.conf.default.rp_filter=0sudo sysctl net.ipv4.conf.all.rp_filter=0sudo sysctl net.ipv4.ip_forward=1sudo sysctl net.ipv6.conf.all.f">
+    
+        <link rel="alternate" type="application/atom+xml" title="ZXWalk" href="/atom.xml">
+    
+    <link rel="shortcut icon" href="/img/favicon.ico">
+    <link rel="stylesheet" href="//unpkg.com/hexo-theme-material-indigo@latest/css/style.css">
+    <script>window.lazyScripts=[]</script>
+</head>
+
+<body>
+    <div id="loading" class="active"></div>
+
+    <aside id="menu" class="hide" >
+  <div class="inner flex-row-vertical">
+    <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
+        <i class="icon icon-lg icon-close"></i>
+    </a>
+    <div class="brand-wrap" style="background-image:url(/img/brand.jpg)">
+      <div class="brand">
+        <a href="/" class="avatar waves-effect waves-circle waves-light">
+          <img src="/img/avatar.jpg">
+        </a>
+        <hgroup class="introduce">
+          <h5 class="nickname">祥子</h5>
+          <a href="mailto:960376043@qq.com" title="960376043@qq.com" class="mail">960376043@qq.com</a>
+        </hgroup>
+      </div>
+    </div>
+    <div class="scroll-wrap flex-col">
+      <ul class="nav">
+        
+            <li class="waves-block waves-effect">
+              <a href="/"  >
+                <i class="icon icon-lg icon-home"></i>
+                主页
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/archives"  >
+                <i class="icon icon-lg icon-archives"></i>
+                归档
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/tags"  >
+                <i class="icon icon-lg icon-tags"></i>
+                标签
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/categories"  >
+                <i class="icon icon-lg icon-th-list"></i>
+                分类
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://github.com/XZwalk" target="_blank" >
+                <i class="icon icon-lg icon-github"></i>
+                Github
+              </a>
+            </li>
+        
+      </ul>
+    </div>
+  </div>
+</aside>
+
+    <main id="main">
+        <header class="top-header" id="header">
+    <div class="flex-row">
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
+          <i class="icon icon-lg icon-navicon"></i>
+        </a>
+        <div class="flex-col header-title ellipsis">Ubuntu使用过程中遇到的问题</div>
+        
+        <div class="search-wrap" id="search-wrap">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
+                <i class="icon icon-lg icon-chevron-left"></i>
+            </a>
+            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="输入感兴趣的关键字">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="search">
+                <i class="icon icon-lg icon-search"></i>
+            </a>
+        </div>
+        
+        
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menuShare">
+            <i class="icon icon-lg icon-share-alt"></i>
+        </a>
+        
+    </div>
+</header>
+<header class="content-header post-header">
+
+    <div class="container fade-scale">
+        <h1 class="title">Ubuntu使用过程中遇到的问题</h1>
+        <h5 class="subtitle">
+            
+                <time datetime="2017-06-08T13:21:31.000Z" itemprop="datePublished" class="page-time">
+  2017-06-08
+</time>
+
+
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/Linux/">Linux</a></li></ul>
+
+            
+        </h5>
+    </div>
+
+    
+
+
+</header>
+
+
+<div class="container body-wrap">
+    
+    <aside class="post-widget">
+        <nav class="post-toc-wrap" id="post-toc">
+            <h4>TOC</h4>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#Ubuntu使用过程中遇到的问题"><span class="post-toc-number">1.</span> <span class="post-toc-text">Ubuntu使用过程中遇到的问题</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#遇到的坑"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">遇到的坑</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#1-网线已经连接，ip也配置好了，但是无法上网。"><span class="post-toc-number">1.1.1.</span> <span class="post-toc-text">1.网线已经连接，ip也配置好了，但是无法上网。</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#2-安装了搜狗输入法之后，无法输入特殊符号，例如按下shift-8打不出"><span class="post-toc-number">1.1.2.</span> <span class="post-toc-text">2.安装了搜狗输入法之后，无法输入特殊符号，例如按下shift+8打不出*</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#3-Ubuntu进入桌面后时不时闪屏"><span class="post-toc-number">1.1.3.</span> <span class="post-toc-text">3.Ubuntu进入桌面后时不时闪屏</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#参考"><span class="post-toc-number">1.2.</span> <span class="post-toc-text">参考</span></a></li></ol></li></ol>
+        </nav>
+    </aside>
+    
+<article id="post-Linux/Ubuntu使用过程中遇到的问题"
+  class="post-article article-type-post fade" itemprop="blogPost">
+
+    <div class="post-card">
+        <h1 class="post-card-title">Ubuntu使用过程中遇到的问题</h1>
+        <div class="post-meta">
+            <time class="post-time" title="2017-06-08 21:21:31" datetime="2017-06-08T13:21:31.000Z"  itemprop="datePublished">2017-06-08</time>
+
+            
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/Linux/">Linux</a></li></ul>
+
+
+
+            
+<span id="busuanzi_container_page_pv" title="文章总阅读量" style='display:none'>
+    <i class="icon icon-eye icon-pr"></i><span id="busuanzi_value_page_pv"></span>
+</span>
+
+
+            
+
+        </div>
+        <div class="post-content" id="post-content" itemprop="postContent">
+            <h1 id="Ubuntu使用过程中遇到的问题"><a href="#Ubuntu使用过程中遇到的问题" class="headerlink" title="Ubuntu使用过程中遇到的问题"></a>Ubuntu使用过程中遇到的问题</h1><p>​</p>
+<h2 id="遇到的坑"><a href="#遇到的坑" class="headerlink" title="遇到的坑"></a>遇到的坑</h2><h3 id="1-网线已经连接，ip也配置好了，但是无法上网。"><a href="#1-网线已经连接，ip也配置好了，但是无法上网。" class="headerlink" title="1.网线已经连接，ip也配置好了，但是无法上网。"></a>1.网线已经连接，ip也配置好了，但是无法上网。</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">sudo sysctl net.ipv4.conf.default.rp_filter=0</div><div class="line">sudo sysctl net.ipv4.conf.all.rp_filter=0</div><div class="line">sudo sysctl net.ipv4.ip_forward=1</div><div class="line">sudo sysctl net.ipv6.conf.all.forwarding=1</div></pre></td></tr></table></figure>
+<p>或者直接追加到/etc/sysctl.conf</p>
+<p>如果遇到“设备未托管”，一般是台式机默认移动ip后禁用网络。<br>那么修改/etc/NetworkManager/NetworkManager.conf，设置managed=true,reboot</p>
+<p>有时候遇到即使改了上面四条仍旧无法连接网络，那么就是由于managed=true引起的，再改成false即可连接网页。</p>
+<h3 id="2-安装了搜狗输入法之后，无法输入特殊符号，例如按下shift-8打不出"><a href="#2-安装了搜狗输入法之后，无法输入特殊符号，例如按下shift-8打不出" class="headerlink" title="2.安装了搜狗输入法之后，无法输入特殊符号，例如按下shift+8打不出*"></a>2.安装了搜狗输入法之后，无法输入特殊符号，例如按下shift+8打不出*</h3><p>1.到搜狗输入法的设置面板<br>2.点击高级-&gt;打开Fcitx设置。<br>3.看一下除了搜狗输入法以外的另一个输入法是什么，如果是<code>键盘(汉语)</code>或者<code>键盘(英语)</code>直接点击左下角的<code>-</code>号删掉，新增一个<code>键盘(美国)</code>。<br>这样就可以了。</p>
+<h3 id="3-Ubuntu进入桌面后时不时闪屏"><a href="#3-Ubuntu进入桌面后时不时闪屏" class="headerlink" title="3.Ubuntu进入桌面后时不时闪屏"></a>3.Ubuntu进入桌面后时不时闪屏</h3><p>1.检查系统信息<br>首先，检查内核版本<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">uname -ra</div></pre></td></tr></table></figure></p>
+<p>发现我的内核版本是4.8<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">x86_64</div></pre></td></tr></table></figure></p>
+<p>表明系统是64位</p>
+<p>2.下载内核<br>去这个网站下载<a href="http://kernel.ubuntu.com/~kernel-ppa/mainline/v4.11/" target="_blank" rel="external">内核</a>，我的电脑是64位系统，下载amd64的文件，32位的系统下载i386的内核。</p>
+<p>3.安装内核<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo dpkg -i *.deb</div></pre></td></tr></table></figure></p>
+<p>4.重启系统<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">reboot</div></pre></td></tr></table></figure></p>
+<h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><p><a href="http://www.linuxdiyf.com/linux/13479.html" target="_blank" rel="external">ubuntu出现有线已连接却无法上网</a><br><a href="http://www.voidcn.com/blog/linxingqianglai/article/p-6081313.html" target="_blank" rel="external">ubuntu中shift键打不出特殊符号</a></p>
+
+        </div>
+
+        <blockquote class="post-copyright">
+    <div class="content">
+        
+<span class="post-time">
+    最后更新时间：<time datetime="2017-06-12T13:26:25.558Z" itemprop="dateUpdated">2017-06-12 21:26:25</time>
+</span><br>
+
+
+        
+        欢迎打赏！
+        
+    </div>
+    <footer>
+        <a href="https://markdownimages.github.io">
+            <img src="/img/avatar.jpg" alt="祥子">
+            祥子
+        </a>
+    </footer>
+</blockquote>
+
+        
+<div class="page-reward">
+    <a id="rewardBtn" href="javascript:;" class="page-reward-btn waves-effect waves-circle waves-light">赏</a>
+</div>
+
+
+
+        <div class="post-footer">
+            
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Linux/">Linux</a></li></ul>
+
+
+            
+<div class="page-share-wrap">
+    
+
+<div class="page-share" id="pageShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://markdownimages.github.io/2017/06/08/Linux/Ubuntu使用过程中遇到的问题/&title=《Ubuntu使用过程中遇到的问题》 — ZXWalk&pic=https://markdownimages.github.io/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://markdownimages.github.io/2017/06/08/Linux/Ubuntu使用过程中遇到的问题/&title=《Ubuntu使用过程中遇到的问题》 — ZXWalk&source=我是一只小小小小鸟......" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://markdownimages.github.io/2017/06/08/Linux/Ubuntu使用过程中遇到的问题/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《Ubuntu使用过程中遇到的问题》 — ZXWalk&url=https://markdownimages.github.io/2017/06/08/Linux/Ubuntu使用过程中遇到的问题/&via=https://markdownimages.github.io" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://markdownimages.github.io/2017/06/08/Linux/Ubuntu使用过程中遇到的问题/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+
+    <a href="javascript:;" id="shareFab" class="page-share-fab waves-effect waves-circle">
+        <i class="icon icon-share-alt icon-lg"></i>
+    </a>
+</div>
+
+
+
+        </div>
+    </div>
+
+    
+<nav class="post-nav flex-row flex-justify-between">
+  
+    <div class="waves-block waves-effect prev">
+      <a href="/2017/06/10/Linux/Ubuntu安装常用软件/" id="post-prev" class="post-nav-link">
+        <div class="tips"><i class="icon icon-angle-left icon-lg icon-pr"></i> Prev</div>
+        <h4 class="title">Ubuntu安装常用软件</h4>
+      </a>
+    </div>
+  
+
+  
+    <div class="waves-block waves-effect next">
+      <a href="/2017/06/07/Linux/ubuntu系统安装过程/" id="post-next" class="post-nav-link">
+        <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
+        <h4 class="title">ubuntu系统安装过程</h4>
+      </a>
+    </div>
+  
+</nav>
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+<div id="reward" class="page-modal reward-lay">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <h3 class="reward-title">
+        <i class="icon icon-quote-left"></i>
+        谢谢大爷~
+        <i class="icon icon-quote-right"></i>
+    </h3>
+    <ul class="reward-items">
+        
+        <li>
+            <img src="/img/wechat.jpg" title="微信打赏二维码" alt="微信打赏二维码">
+            <p>微信</p>
+        </li>
+        
+
+        
+        <li>
+            <img src="/img/alipay.jpg" title="支付宝打赏二维码" alt="支付宝打赏二维码">
+            <p>支付宝</p>
+        </li>
+        
+    </ul>
+</div>
+
+
+
+</div>
+
+        <footer class="footer">
+    <div class="top">
+        
+<p>
+    <span id="busuanzi_container_site_uv" style='display:none'>
+        站点总访客数：<span id="busuanzi_value_site_uv"></span>
+    </span>
+    <span id="busuanzi_container_site_pv" style='display:none'>
+        站点总访问量：<span id="busuanzi_value_site_pv"></span>
+    </span>
+</p>
+
+
+        <p>
+            
+                <span><a href="/atom.xml" target="_blank" class="rss" title="rss"><i class="icon icon-lg icon-rss"></i></a></span>
+            
+            <span>博客内容遵循<a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">知识共享 署名 - 非商业性 - 相同方式共享 4.0 国际协议</a></span>
+        </p>
+    </div>
+    <div class="bottom">
+        <p>
+            <span>Power by <a href="http://hexo.io/" target="_blank">Hexo</a> Theme <a href="https://github.com/yscoder/hexo-theme-indigo" target="_blank">indigo</a></span>
+            <span>祥子 &copy; 2015 - 2017</span>
+        </p>
+    </div>
+</footer>
+
+    </main>
+    <div class="mask" id="mask"></div>
+<a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-chevron-up"></span></a>
+
+
+
+<div class="global-share" id="globalShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://markdownimages.github.io/2017/06/08/Linux/Ubuntu使用过程中遇到的问题/&title=《Ubuntu使用过程中遇到的问题》 — ZXWalk&pic=https://markdownimages.github.io/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://markdownimages.github.io/2017/06/08/Linux/Ubuntu使用过程中遇到的问题/&title=《Ubuntu使用过程中遇到的问题》 — ZXWalk&source=我是一只小小小小鸟......" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://markdownimages.github.io/2017/06/08/Linux/Ubuntu使用过程中遇到的问题/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《Ubuntu使用过程中遇到的问题》 — ZXWalk&url=https://markdownimages.github.io/2017/06/08/Linux/Ubuntu使用过程中遇到的问题/&via=https://markdownimages.github.io" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://markdownimages.github.io/2017/06/08/Linux/Ubuntu使用过程中遇到的问题/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+<div class="page-modal wx-share" id="wxShare">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAPYAAAD2CAAAAADAeSUUAAADKElEQVR42u3aW04rMRAFQPa/6dxfJGDuOd0BZZzyFxpNjMuRaPrx8RGvx6f19fn1+5/f+WmfZM9k/ycvbGxs7JuwH5fr61Hy9/Md8ku8fp6cDRsbG/tU9nUguT5cQmoDYY7JLw4bGxsbuz1EHVRGV4ONjY2NnbNnJaHkWLN0BRsbGxt7UyRqA0lSAGpr+H9US8PGxsZ+eXbeFX39n3+lv42NjY39wuxHuZK04XrnTarzeNLCxsbGPok9G9nJQ0heDGrDZ9tI/uac2NjY2Aex81DRFu6TK9tc05PLSdjY2Ng3ZOeN0jaM5WnJbIhnNtCDjY2NfR47/1gSQjafnQ3obL4MbGxs7FPZbTqRFHdmYzebAJbvjI2NjX0GO2/Z5uxZ6ScHzwpV0bGwsbGxb8huGZs0YHPcTbM5qqthY2Nj35CdhIc2RclD436sZzjKg42NjX0cO+fNiviz8Z3njvjU5SRsbGzsm7A3W7chajbcUzduZ0UlbGxs7Nuy25GazehMGxSTdsIsacHGxsY+id02YttAlacxbXOibSp8szM2Njb2Eez2j/6jXLNC0mxIqLg4bGxs7OPYbek/Lxj9RlqSK6L+NjY2NvbN2S1gc5T8eRLSZqkLNjY29juwZ2WmWVEpD4dtkpNfBzY2Nvbd2Xkrt00S2qD1N+0HbGxs7PPYzy3672vvm/CWP8HGxsY+if2s4BGVb0YJT1Eeyi8RGxsb+yD2JiH5CNbmCtomQT2siY2Njf0G7E3hpi391OFnncZgY2Njn8fOizjXF5QHs/bntqEbpSLY2NjYR7A3/5/Pmrv5RbTvJ/tgY2Njn8eejdTkwzp5ePtPGSh+M2pOY2NjYx/K3hyuPei+CJWftigqYWNjY9+KvR+7zINHG97yLKoe9MHGxsY+iL0p7s/Ga6JhmnKsZ/M1YGNjY5/BzoNWW07KA9i+VFQHMGxsbOzj2HkyMGuvzpBt86BIQrCxsbHfmL1JUTZJyGxI9MffiI2Njf3G7GeNS84C0v7isLGxsU9l50WlNpBsGsltiSr/LDY2NvZJ7DZUzEJUUirKG8Z5S2CFx8bGxn519j+NL7C8r4NvWwAAAABJRU5ErkJggg==" alt="微信分享二维码">
+</div>
+
+
+
+
+    <script src="//cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script>
+<script>
+var BLOG = { ROOT: '/', SHARE: true, REWARD: true };
+
+
+
+</script>
+
+<script src="//unpkg.com/hexo-theme-material-indigo@latest/js/main.min.js"></script>
+
+
+<div class="search-panel" id="search-panel">
+    <ul class="search-result" id="search-result"></ul>
+</div>
+<template id="search-tpl">
+<li class="item">
+    <a href="{path}" class="waves-block waves-effect">
+        <div class="title ellipsis" title="{title}">{title}</div>
+        <div class="flex-row flex-middle">
+            <div class="tags ellipsis">
+                {tags}
+            </div>
+            <time class="flex-col time">{date}</time>
+        </div>
+    </a>
+</li>
+</template>
+
+<script src="//unpkg.com/hexo-theme-material-indigo@latest/js/search.min.js" async></script>
+
+
+
+
+
+
+<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+
+
+</body>
+</html>
