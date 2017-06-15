@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://markdownimages.github.io/2017/06/15/Hexo/hello-world/</loc>
+    
+    <lastmod>2017-06-15T03:15:53.910Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://markdownimages.github.io/2017/06/07/Linux/ubuntu%E7%B3%BB%E7%BB%9F%E5%AE%89%E8%A3%85%E8%BF%87%E7%A8%8B/</loc>
     
     <lastmod>2017-06-15T02:30:32.488Z</lastmod>
@@ -33,13 +40,6 @@
     <loc>https://markdownimages.github.io/categories/index.html</loc>
     
     <lastmod>2017-06-12T07:19:16.589Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://markdownimages.github.io/2017/06/15/Hexo/hello-world/</loc>
-    
-    <lastmod>2017-06-12T05:38:49.099Z</lastmod>
     
   </url>
   
