@@ -1,0 +1,690 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+
+    
+
+    
+
+
+
+    <meta charset="utf-8">
+    
+    
+    
+    <title>git的使用 | ZXWalk | 不忘初心 方得始终</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <meta name="theme-color" content="#FE5D4E">
+    
+    
+    <meta name="keywords" content="git">
+    <meta name="description" content="#git的使用 git是一款免费、开源的分布式版本控制系统，用于敏捷高效地处理任何或小或大的项目。Git是一个开源的分布式版本控制系统，用以有效、高速的 处理从很小到非常大的项目版本管理。 Git 是 Linus Torvalds 为了帮助管理 Linux 内核开发而开发的一个开放源码的版本控制软件。这里附上一个不错的学习git的网站 git 使用手册 一、配置git环境1.打开终端， 直接输入，">
+<meta name="keywords" content="git">
+<meta property="og:type" content="article">
+<meta property="og:title" content="git的使用">
+<meta property="og:url" content="https://markdownimages.github.io/2017/06/19/技术文档/iOS/工具/git的使用/index.html">
+<meta property="og:site_name" content="ZXWalk">
+<meta property="og:description" content="#git的使用 git是一款免费、开源的分布式版本控制系统，用于敏捷高效地处理任何或小或大的项目。Git是一个开源的分布式版本控制系统，用以有效、高速的 处理从很小到非常大的项目版本管理。 Git 是 Linus Torvalds 为了帮助管理 Linux 内核开发而开发的一个开放源码的版本控制软件。这里附上一个不错的学习git的网站 git 使用手册 一、配置git环境1.打开终端， 直接输入，">
+<meta property="og:image" content="https://raw.githubusercontent.com/XZwalk/MarkdownImages/master/1.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/XZwalk/MarkdownImages/master/2.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/XZwalk/MarkdownImages/master/3.jpg">
+<meta property="og:image" content="https://raw.githubusercontent.com/XZwalk/MarkdownImages/master/4.jpg">
+<meta property="og:image" content="https://raw.githubusercontent.com/XZwalk/MarkdownImages/master/5.jpg">
+<meta property="og:image" content="https://raw.githubusercontent.com/XZwalk/MarkdownImages/master/6.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/XZwalk/MarkdownImages/master/7.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/XZwalk/MarkdownImages/master/8.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/XZwalk/MarkdownImages/master/9.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/XZwalk/MarkdownImages/master/10.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/XZwalk/MarkdownImages/master/11.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/XZwalk/MarkdownImages/master/12.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/MarkdownImages/MarkdownImages/master/%E5%B9%B3%E5%B8%B8%E9%9B%B6%E6%95%A3%E5%9B%BE/git%E6%89%BE%E5%9B%9E%E5%8E%86%E5%8F%B2%E8%AE%B0%E5%BD%95.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/XZwalk/MarkdownImages/master/13.jpg">
+<meta property="og:updated_time" content="2017-06-19T09:51:04.058Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="git的使用">
+<meta name="twitter:description" content="#git的使用 git是一款免费、开源的分布式版本控制系统，用于敏捷高效地处理任何或小或大的项目。Git是一个开源的分布式版本控制系统，用以有效、高速的 处理从很小到非常大的项目版本管理。 Git 是 Linus Torvalds 为了帮助管理 Linux 内核开发而开发的一个开放源码的版本控制软件。这里附上一个不错的学习git的网站 git 使用手册 一、配置git环境1.打开终端， 直接输入，">
+<meta name="twitter:image" content="https://raw.githubusercontent.com/XZwalk/MarkdownImages/master/1.png">
+    
+        <link rel="alternate" type="application/atom+xml" title="ZXWalk" href="/atom.xml">
+    
+    <link rel="shortcut icon" href="/img/favicon.ico">
+    <link rel="stylesheet" href="//unpkg.com/hexo-theme-material-indigo@latest/css/style.css">
+    <script>window.lazyScripts=[]</script>
+</head>
+
+<body>
+    <div id="loading" class="active"></div>
+
+    <aside id="menu" class="hide" >
+  <div class="inner flex-row-vertical">
+    <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
+        <i class="icon icon-lg icon-close"></i>
+    </a>
+    <div class="brand-wrap" style="background-image:url(/img/brand.jpg)">
+      <div class="brand">
+        <a href="/" class="avatar waves-effect waves-circle waves-light">
+          <img src="/img/avatar.jpg">
+        </a>
+        <hgroup class="introduce">
+          <h5 class="nickname">祥子</h5>
+          <a href="mailto:960376043@qq.com" title="960376043@qq.com" class="mail">960376043@qq.com</a>
+        </hgroup>
+      </div>
+    </div>
+    <div class="scroll-wrap flex-col">
+      <ul class="nav">
+        
+            <li class="waves-block waves-effect">
+              <a href="/"  >
+                <i class="icon icon-lg icon-home"></i>
+                主页
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/archives"  >
+                <i class="icon icon-lg icon-archives"></i>
+                归档
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/tags"  >
+                <i class="icon icon-lg icon-tags"></i>
+                标签
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/categories"  >
+                <i class="icon icon-lg icon-th-list"></i>
+                分类
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://github.com/XZwalk" target="_blank" >
+                <i class="icon icon-lg icon-github"></i>
+                Github
+              </a>
+            </li>
+        
+      </ul>
+    </div>
+  </div>
+</aside>
+
+    <main id="main">
+        <header class="top-header" id="header">
+    <div class="flex-row">
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
+          <i class="icon icon-lg icon-navicon"></i>
+        </a>
+        <div class="flex-col header-title ellipsis">git的使用</div>
+        
+        <div class="search-wrap" id="search-wrap">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
+                <i class="icon icon-lg icon-chevron-left"></i>
+            </a>
+            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="输入感兴趣的关键字">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="search">
+                <i class="icon icon-lg icon-search"></i>
+            </a>
+        </div>
+        
+        
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menuShare">
+            <i class="icon icon-lg icon-share-alt"></i>
+        </a>
+        
+    </div>
+</header>
+<header class="content-header post-header">
+
+    <div class="container fade-scale">
+        <h1 class="title">git的使用</h1>
+        <h5 class="subtitle">
+            
+                <time datetime="2017-06-19T09:44:31.000Z" itemprop="datePublished" class="page-time">
+  2017-06-19
+</time>
+
+
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/工具/">工具</a></li></ul>
+
+            
+        </h5>
+    </div>
+
+    
+
+
+</header>
+
+
+<div class="container body-wrap">
+    
+    <aside class="post-widget">
+        <nav class="post-toc-wrap" id="post-toc">
+            <h4>TOC</h4>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#一、配置git环境"><span class="post-toc-number">1.</span> <span class="post-toc-text">一、配置git环境</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#二、配置git个人信息"><span class="post-toc-number">2.</span> <span class="post-toc-text">二、配置git个人信息</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#三、新建一个git仓库的方法"><span class="post-toc-number">3.</span> <span class="post-toc-text">三、新建一个git仓库的方法</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#四、将git仓库推送到远程"><span class="post-toc-number">4.</span> <span class="post-toc-text">四、将git仓库推送到远程</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#五、Xcode中的显示"><span class="post-toc-number">5.</span> <span class="post-toc-text">五、Xcode中的显示</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#六、git常用命令"><span class="post-toc-number">6.</span> <span class="post-toc-text">六、git常用命令</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#远程仓库相关命令"><span class="post-toc-number">6.1.</span> <span class="post-toc-text">远程仓库相关命令</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#1-克隆一份代码到本地"><span class="post-toc-number">6.1.1.</span> <span class="post-toc-text">1. 克隆一份代码到本地</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#2-查看远程仓库"><span class="post-toc-number">6.1.2.</span> <span class="post-toc-text">2. 查看远程仓库</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#3-添加远程仓库"><span class="post-toc-number">6.1.3.</span> <span class="post-toc-text">3. 添加远程仓库</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#4-删除远程仓库"><span class="post-toc-number">6.1.4.</span> <span class="post-toc-text">4. 删除远程仓库</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#5-拉取远程仓库"><span class="post-toc-number">6.1.5.</span> <span class="post-toc-text">5. 拉取远程仓库</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#6-推送远程仓库"><span class="post-toc-number">6.1.6.</span> <span class="post-toc-text">6. 推送远程仓库</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#github-push错误：403-Forbidden"><span class="post-toc-number">6.1.6.1.</span> <span class="post-toc-text">github push错误：403 Forbidden</span></a></li></ol></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#7-添加某台电脑上的某个文件夹当做远程服务器"><span class="post-toc-number">6.1.7.</span> <span class="post-toc-text">7. 添加某台电脑上的某个文件夹当做远程服务器</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#分支-branch-操作相关命令"><span class="post-toc-number">6.2.</span> <span class="post-toc-text">分支(branch)操作相关命令</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#1-查看本地分支"><span class="post-toc-number">6.2.1.</span> <span class="post-toc-text">1. 查看本地分支</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#2-查看远程分支"><span class="post-toc-number">6.2.2.</span> <span class="post-toc-text">2. 查看远程分支</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#3-创建本地分支"><span class="post-toc-number">6.2.3.</span> <span class="post-toc-text">3. 创建本地分支</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#4-切换分支"><span class="post-toc-number">6.2.4.</span> <span class="post-toc-text">4. 切换分支</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#5-创建新分支并立即切换到新分支"><span class="post-toc-number">6.2.5.</span> <span class="post-toc-text">5. 创建新分支并立即切换到新分支</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#6-删除分支"><span class="post-toc-number">6.2.6.</span> <span class="post-toc-text">6. 删除分支</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#7-合并分支"><span class="post-toc-number">6.2.7.</span> <span class="post-toc-text">7. 合并分支</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#8-创建远程分支-本地分支push到远程"><span class="post-toc-number">6.2.8.</span> <span class="post-toc-text">8. 创建远程分支(本地分支push到远程)</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#9-删除远程分支"><span class="post-toc-number">6.2.9.</span> <span class="post-toc-text">9. 删除远程分支</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#ignore文件操作"><span class="post-toc-number">6.3.</span> <span class="post-toc-text">ignore文件操作</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#1-对已经提交过的文件执行ignore"><span class="post-toc-number">6.3.1.</span> <span class="post-toc-text">1.对已经提交过的文件执行ignore</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#2-对未commit的文件执行ignore"><span class="post-toc-number">6.3.2.</span> <span class="post-toc-text">2.对未commit的文件执行ignore</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#回退代码相关操作"><span class="post-toc-number">6.4.</span> <span class="post-toc-text">回退代码相关操作</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#1-回退代码到某个版本-保留吐出的代码"><span class="post-toc-number">6.4.1.</span> <span class="post-toc-text">1. 回退代码到某个版本, 保留吐出的代码</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#2-回退代码到某个版本-不保留吐出的代码"><span class="post-toc-number">6.4.2.</span> <span class="post-toc-text">2. 回退代码到某个版本, 不保留吐出的代码</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#3-回滚之前提交的某个点，-生成一个新的提交点"><span class="post-toc-number">6.4.3.</span> <span class="post-toc-text">3. 回滚之前提交的某个点， 生成一个新的提交点</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#4-取消某次merge的内容"><span class="post-toc-number">6.4.4.</span> <span class="post-toc-text">4. 取消某次merge的内容</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#分支编辑"><span class="post-toc-number">6.5.</span> <span class="post-toc-text">分支编辑</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#1-如果当前分支既有未从远程pull下来的代码，-又有本地已经commit的代码，-即分支上出现一上一下箭头，-采用如下命令"><span class="post-toc-number">6.5.1.</span> <span class="post-toc-text">1. 如果当前分支既有未从远程pull下来的代码， 又有本地已经commit的代码， 即分支上出现一上一下箭头， 采用如下命令</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#2-想在某条分支上移动某个分支"><span class="post-toc-number">6.5.2.</span> <span class="post-toc-text">2. 想在某条分支上移动某个分支</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#3-想将某条分支上拉出的分支移动到另一个分支的某个点"><span class="post-toc-number">6.5.3.</span> <span class="post-toc-text">3. 想将某条分支上拉出的分支移动到另一个分支的某个点</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#其他操作"><span class="post-toc-number">6.6.</span> <span class="post-toc-text">其他操作</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#1-想要对之前已经进行过git-ignore操作的文件再次添加进git管理中，-执行如下操作"><span class="post-toc-number">6.6.1.</span> <span class="post-toc-text">1. 想要对之前已经进行过git ignore操作的文件再次添加进git管理中， 执行如下操作</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#2-强制push某个点到远程"><span class="post-toc-number">6.6.2.</span> <span class="post-toc-text">2. 强制push某个点到远程</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#3-第一次将从某个分支拉出来的分支合到这个分支上的时候，-容易出现拉成直线的情况，-这时候要执行下面的操作"><span class="post-toc-number">6.6.3.</span> <span class="post-toc-text">3. 第一次将从某个分支拉出来的分支合到这个分支上的时候， 容易出现拉成直线的情况， 这时候要执行下面的操作</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#4-删除本地SourceTree中远程分支目录里面已经被删除的分支"><span class="post-toc-number">6.6.4.</span> <span class="post-toc-text">4. 删除本地SourceTree中远程分支目录里面已经被删除的分支</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#5-重命名远程分支"><span class="post-toc-number">6.6.5.</span> <span class="post-toc-text">5. 重命名远程分支</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#6-从Git仓库中恢复已删除的分支或丢失的commit"><span class="post-toc-number">6.6.6.</span> <span class="post-toc-text">6. 从Git仓库中恢复已删除的分支或丢失的commit</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#7-关于vim窗口的使用"><span class="post-toc-number">6.6.7.</span> <span class="post-toc-text">7. 关于vim窗口的使用</span></a></li></ol></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#七、git命令合集"><span class="post-toc-number">7.</span> <span class="post-toc-text">七、git命令合集</span></a></li></ol>
+        </nav>
+    </aside>
+    
+<article id="post-技术文档/iOS/工具/git的使用"
+  class="post-article article-type-post fade" itemprop="blogPost">
+
+    <div class="post-card">
+        <h1 class="post-card-title">git的使用</h1>
+        <div class="post-meta">
+            <time class="post-time" title="2017-06-19 17:44:31" datetime="2017-06-19T09:44:31.000Z"  itemprop="datePublished">2017-06-19</time>
+
+            
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/工具/">工具</a></li></ul>
+
+
+
+            
+<span id="busuanzi_container_page_pv" title="文章总阅读量" style='display:none'>
+    <i class="icon icon-eye icon-pr"></i><span id="busuanzi_value_page_pv"></span>
+</span>
+
+
+            
+
+        </div>
+        <div class="post-content" id="post-content" itemprop="postContent">
+            <p>#git的使用</p>
+<p><strong>git</strong>是一款免费、开源的分布式版本控制系统，用于敏捷高效地处理任何或小或大的项目。Git是一个开源的分布式版本控制系统，用以有效、高速的 处理从很小到非常大的项目版本管理。 Git 是 Linus Torvalds 为了帮助管理 Linux 内核开发而开发的一个开放源码的版本控制软件。这里附上一个不错的学习git的网站 <a href="http://git-scm.com/book/zh/v1" target="_blank" rel="external">git 使用手册</a></p>
+<h2 id="一、配置git环境"><a href="#一、配置git环境" class="headerlink" title="一、配置git环境"></a>一、配置git环境</h2><p>1.打开终端， 直接输入， 先检查系统是否已经存在<a href="https://help.github.com/articles/generating-ssh-keys/" target="_blank" rel="external">SSH key</a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">cat ~/.ssh/id_rsa.pub然后回车</div></pre></td></tr></table></figure></p>
+<p>2.不存在的话 创建一个新的SSH key， 这里一般使用的都是邮箱， 比如你的gitHub的邮箱呀什么的。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">ssh-keygen -t rsa -C&quot;your_email@youremail.com&quot;</div></pre></td></tr></table></figure></p>
+<p> 这里输入的过程中可能提示输入一个类似于密码的自定义的通行证号，如果直接回车则为空， 可能也会要你输入将要保存的路径，直接回车默认为当前路径。</p>
+<p>3.创建成功之后， 在执行命令1拿到SSH key， 复制一下<br><figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="https://raw.githubusercontent.com/XZwalk/MarkdownImages/master/1.png" alt="Alt text" title="">
+                </div>
+                <div class="image-caption">Alt text</div>
+            </figure></p>
+<p>如图一长串的东西就是SSH Key</p>
+<blockquote>
+<p>一定要记得复制的时候包括<code>ssh-rsa</code></p>
+</blockquote>
+<p>4.将SSH key输入到GitHub网站中（以将远程仓库建立在gitHub中为例）<br><figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="https://raw.githubusercontent.com/XZwalk/MarkdownImages/master/2.png" alt="Alt text" title="">
+                </div>
+                <div class="image-caption">Alt text</div>
+            </figure></p>
+<p>如图设置一个标题， 然后把之前复制的一串东西粘贴进去就是了<br>5.测试是否能够正确链接到github中，输入以下命令：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">ssh -T git@github.com</div></pre></td></tr></table></figure></p>
+<p>将会显示一下信息<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">The authenticity of host &apos;github.com (207.97.227.239)&apos; can&apos;t be established. RSA key fingerprint is 16:27:ac:a5:76:28:2d:36:63:1b:56:4d:eb:df:a6:48. Are you sure you want to continue connecting (yes/no)?</div></pre></td></tr></table></figure></p>
+<p>输入yes后，显示出下列信息表示连接成功<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">Hi username! You&apos;ve successfully authenticated, but GitHub does not provide shell access.</div></pre></td></tr></table></figure></p>
+<h2 id="二、配置git个人信息"><a href="#二、配置git个人信息" class="headerlink" title="二、配置git个人信息"></a>二、配置git个人信息</h2><p>1.设置用户名和邮箱<br>//配置名字<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git config --global user.name&quot;Firstname Lastname&quot;</div></pre></td></tr></table></figure></p>
+<p>//配置邮箱<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git config --global user.email&quot;your_email@youremail.com&quot;</div></pre></td></tr></table></figure></p>
+<p>//配置完以后检查配置是否正确<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git config -l（这个是小写的L）</div></pre></td></tr></table></figure></p>
+<p>Git通过检测用户名和邮箱来跟踪进行commit的用户， 所以需要配置一下， 以区分不同用户的提交信息， 一般都是多人开发嘛</p>
+<h2 id="三、新建一个git仓库的方法"><a href="#三、新建一个git仓库的方法" class="headerlink" title="三、新建一个git仓库的方法"></a>三、新建一个git仓库的方法</h2><p>1.使用xcode自带的方法创建<br><figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="https://raw.githubusercontent.com/XZwalk/MarkdownImages/master/3.jpg" alt="Alt text" title="">
+                </div>
+                <div class="image-caption">Alt text</div>
+            </figure></p>
+<p>打开Xcode，创建一个新的工程<br><figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="https://raw.githubusercontent.com/XZwalk/MarkdownImages/master/4.jpg" alt="Alt text" title="">
+                </div>
+                <div class="image-caption">Alt text</div>
+            </figure></p>
+<p>选择下一步，在项目名中输入你要创建的项目的名字<br><figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="https://raw.githubusercontent.com/XZwalk/MarkdownImages/master/5.jpg" alt="Alt text" title="">
+                </div>
+                <div class="image-caption">Alt text</div>
+            </figure></p>
+<p>点击下一步，也就是最后一个步骤，在这里先选择一个要保持工程的目录，然后在窗口底部选上Create git repository on (My Mac )<br>2.手动创建一个分支的方法</p>
+<ul>
+<li>cd 你要创建的文件夹路径</li>
+<li>git init<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="https://raw.githubusercontent.com/XZwalk/MarkdownImages/master/6.png" alt="Alt text" title="">
+                </div>
+                <div class="image-caption">Alt text</div>
+            </figure>
+你会看到文件夹下有这样一个文件<br>到这里你就完成了一个git仓库的建立。</li>
+</ul>
+<h2 id="四、将git仓库推送到远程"><a href="#四、将git仓库推送到远程" class="headerlink" title="四、将git仓库推送到远程"></a>四、将git仓库推送到远程</h2><p>1、添加远程服务器<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git remote add origin git@github.com:gbyukg/zf-tutorial.git</div></pre></td></tr></table></figure></p>
+<p>2、将你的项目文件夹直接拖到SourceTree里面<br><figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="https://raw.githubusercontent.com/XZwalk/MarkdownImages/master/7.png" alt="Alt text" title="">
+                </div>
+                <div class="image-caption">Alt text</div>
+            </figure><br>图中GitDemo所示</p>
+<p>3、直接在图形化界面里面操作就是了， 第一步可以直接push， 将工程文件推送到服务器上面。</p>
+<h2 id="五、Xcode中的显示"><a href="#五、Xcode中的显示" class="headerlink" title="五、Xcode中的显示"></a>五、Xcode中的显示</h2><p>既然说到git主要用在代码的版本控制上， 那肯定与开发工具有着紧密的联系， 下面就来看一下， xcode上与git是怎么联系的</p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="https://raw.githubusercontent.com/XZwalk/MarkdownImages/master/8.png" alt="Alt text" title="">
+                </div>
+                <div class="image-caption">Alt text</div>
+            </figure>
+<p>常用的操作选项就是上面标出的地方。</p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="https://raw.githubusercontent.com/XZwalk/MarkdownImages/master/9.png" alt="Alt text" title="">
+                </div>
+                <div class="image-caption">Alt text</div>
+            </figure>
+<p>这里是去掉（回退）git操作记录的选项。</p>
+<h2 id="六、git常用命令"><a href="#六、git常用命令" class="headerlink" title="六、git常用命令"></a>六、git常用命令</h2><p>虽然有SourceTree这样好用的图形化界面工具， 但是有些操作是它无法完成的， 或者说在上面操作容易出错的。下面介绍一下git操作常用的命令。</p>
+<h3 id="远程仓库相关命令"><a href="#远程仓库相关命令" class="headerlink" title="远程仓库相关命令"></a>远程仓库相关命令</h3><h4 id="1-克隆一份代码到本地"><a href="#1-克隆一份代码到本地" class="headerlink" title="1. 克隆一份代码到本地"></a>1. 克隆一份代码到本地</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">cd 放置工程文件夹的目录</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git clone 代码的服务器的链接</div></pre></td></tr></table></figure>
+<blockquote>
+<p>克隆到本地之后， 以后就不用每次都用cd定位文件夹了， 可以直接在SourceTree上定位到当前仓库（SourceTree右上角的Terminal选项）</p>
+</blockquote>
+<h4 id="2-查看远程仓库"><a href="#2-查看远程仓库" class="headerlink" title="2. 查看远程仓库"></a>2. 查看远程仓库</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git remote -v</div></pre></td></tr></table></figure>
+<h4 id="3-添加远程仓库"><a href="#3-添加远程仓库" class="headerlink" title="3. 添加远程仓库"></a>3. 添加远程仓库</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">git remote add origin [url]</div><div class="line">//此处的origin可以换成其他的任意名字, 即创建的远程仓库的名字， 下面的操作都要以这个名字为准</div></pre></td></tr></table></figure>
+<h4 id="4-删除远程仓库"><a href="#4-删除远程仓库" class="headerlink" title="4. 删除远程仓库"></a>4. 删除远程仓库</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git remote rm origin</div></pre></td></tr></table></figure>
+<h4 id="5-拉取远程仓库"><a href="#5-拉取远程仓库" class="headerlink" title="5. 拉取远程仓库"></a>5. 拉取远程仓库</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git pull origin [localBranchName]</div></pre></td></tr></table></figure>
+<h4 id="6-推送远程仓库"><a href="#6-推送远程仓库" class="headerlink" title="6. 推送远程仓库"></a>6. 推送远程仓库</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git push origin [localBranchName]</div></pre></td></tr></table></figure>
+<h5 id="github-push错误：403-Forbidden"><a href="#github-push错误：403-Forbidden" class="headerlink" title="github push错误：403 Forbidden"></a>github push错误：403 Forbidden</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">error: The requested URL returned error: 403 Forbidden while accessing https://github.com/wangz/future.git/info/refs  </div><div class="line">git version 1.7.1</div></pre></td></tr></table></figure>
+<p>解决方案：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">//cd到仓库下</div><div class="line">vim .git/config</div></pre></td></tr></table></figure></p>
+<p>修改<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">[remote &quot;origin&quot;]  </div><div class="line">    url = https://github.com/wangz/example.git  </div><div class="line">为：</div><div class="line">[remote &quot;origin&quot;]  </div><div class="line">    url = https://wangz@github.com/wangz/example.git</div></pre></td></tr></table></figure></p>
+<p>再次git push，弹出框输入密码，即可提交</p>
+<h4 id="7-添加某台电脑上的某个文件夹当做远程服务器"><a href="#7-添加某台电脑上的某个文件夹当做远程服务器" class="headerlink" title="7. 添加某台电脑上的某个文件夹当做远程服务器"></a>7. 添加某台电脑上的某个文件夹当做远程服务器</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git remote add 电脑名字+电脑ip+电脑上的某个文件</div></pre></td></tr></table></figure>
+<blockquote>
+<p>使用这个命令是为了给当前仓库添加一个远程服务器， 所以， 你首先必须有一个本地的仓库。<br><figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="https://raw.githubusercontent.com/XZwalk/MarkdownImages/master/10.png" alt="Alt text" title="">
+                </div>
+                <div class="image-caption">Alt text</div>
+            </figure></p>
+</blockquote>
+<p>结果如下<br><figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="https://raw.githubusercontent.com/XZwalk/MarkdownImages/master/11.png" alt="Alt text" title="">
+                </div>
+                <div class="image-caption">Alt text</div>
+            </figure></p>
+<h3 id="分支-branch-操作相关命令"><a href="#分支-branch-操作相关命令" class="headerlink" title="分支(branch)操作相关命令"></a>分支(branch)操作相关命令</h3><h4 id="1-查看本地分支"><a href="#1-查看本地分支" class="headerlink" title="1. 查看本地分支"></a>1. 查看本地分支</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git branch</div></pre></td></tr></table></figure>
+<h4 id="2-查看远程分支"><a href="#2-查看远程分支" class="headerlink" title="2. 查看远程分支"></a>2. 查看远程分支</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git branch -r</div></pre></td></tr></table></figure>
+<h4 id="3-创建本地分支"><a href="#3-创建本地分支" class="headerlink" title="3. 创建本地分支"></a>3. 创建本地分支</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git branch [name] ----注意新分支创建后不会自动切换为当前分支</div></pre></td></tr></table></figure>
+<h4 id="4-切换分支"><a href="#4-切换分支" class="headerlink" title="4. 切换分支"></a>4. 切换分支</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git checkout [name]</div></pre></td></tr></table></figure>
+<h4 id="5-创建新分支并立即切换到新分支"><a href="#5-创建新分支并立即切换到新分支" class="headerlink" title="5. 创建新分支并立即切换到新分支"></a>5. 创建新分支并立即切换到新分支</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git checkout -b [name]</div></pre></td></tr></table></figure>
+<h4 id="6-删除分支"><a href="#6-删除分支" class="headerlink" title="6. 删除分支"></a>6. 删除分支</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git branch -d [name] ---- -d选项只能删除已经参与了合并的分支，对于未有合并的分支是无法删除的。如果想强制删除一个分支，可以使用-D选项</div></pre></td></tr></table></figure>
+<h4 id="7-合并分支"><a href="#7-合并分支" class="headerlink" title="7. 合并分支"></a>7. 合并分支</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git merge [name] ----将名称为[name]的分支与当前分支合并</div></pre></td></tr></table></figure>
+<h4 id="8-创建远程分支-本地分支push到远程"><a href="#8-创建远程分支-本地分支push到远程" class="headerlink" title="8. 创建远程分支(本地分支push到远程)"></a>8. 创建远程分支(本地分支push到远程)</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git push origin [name]</div></pre></td></tr></table></figure>
+<h4 id="9-删除远程分支"><a href="#9-删除远程分支" class="headerlink" title="9. 删除远程分支"></a>9. 删除远程分支</h4><p><strong>方式一：</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"> git push origin :[name]</div><div class="line">//如果省略 [本地分支]，那就等于是在说“在这里提取空白然后把它变成[远程分支]”,也就是删除了远程分支</div></pre></td></tr></table></figure></p>
+<p><strong>方式二：</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git push origin -d [name]</div></pre></td></tr></table></figure></p>
+<h3 id="ignore文件操作"><a href="#ignore文件操作" class="headerlink" title="ignore文件操作"></a>ignore文件操作</h3><p><strong>查看忽略文件</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">cat .gitignore</div></pre></td></tr></table></figure></p>
+<p><strong>修改忽略文件</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">vi .gitignore</div><div class="line">这个指令是以只读的形式打开文件的,这个时候按键盘上的大部分按键都是无效的.如果想编写文件,需要下面的指令.</div><div class="line"></div><div class="line">//编写文件 </div><div class="line">开始编写的指令有两个,实现的效果是一样的.直接按键盘上的i或者a,这两个指令的作用都是让编辑器进入对文件的编辑状态</div><div class="line">//保存退出 </div><div class="line">在编辑状态按Esc键,会回到打开文件的状态,这个时候输入:wq(就是write And quite的意思)就会保存并退出Vi编辑器.</div></pre></td></tr></table></figure></p>
+<h4 id="1-对已经提交过的文件执行ignore"><a href="#1-对已经提交过的文件执行ignore" class="headerlink" title="1.对已经提交过的文件执行ignore"></a>1.对已经提交过的文件执行ignore</h4><p>如果出现已经 commit 过的文件无法被忽略，那么需要执行：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">git rm &lt;FILENAME&gt;</div><div class="line">如果执行失败，则可能需要强制移除，执行git rm -r -f &lt;FILENAME&gt;</div></pre></td></tr></table></figure>
+<p>之后提交推送，此后 .gitignore 才会对此文件生效。原因是 .gitignore 只会对没有被 git 记录过的文件生效，也就是 untracked file。</p>
+<h4 id="2-对未commit的文件执行ignore"><a href="#2-对未commit的文件执行ignore" class="headerlink" title="2.对未commit的文件执行ignore"></a>2.对未commit的文件执行ignore</h4><p>直接执行上面的修改忽略文件就可以。</p>
+<h3 id="回退代码相关操作"><a href="#回退代码相关操作" class="headerlink" title="回退代码相关操作"></a>回退代码相关操作</h3><h4 id="1-回退代码到某个版本-保留吐出的代码"><a href="#1-回退代码到某个版本-保留吐出的代码" class="headerlink" title="1. 回退代码到某个版本, 保留吐出的代码"></a>1. 回退代码到某个版本, 保留吐出的代码</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git reset 1b30859</div></pre></td></tr></table></figure>
+<h4 id="2-回退代码到某个版本-不保留吐出的代码"><a href="#2-回退代码到某个版本-不保留吐出的代码" class="headerlink" title="2. 回退代码到某个版本, 不保留吐出的代码"></a>2. 回退代码到某个版本, 不保留吐出的代码</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git reset --hard 1b30859</div></pre></td></tr></table></figure>
+<h4 id="3-回滚之前提交的某个点，-生成一个新的提交点"><a href="#3-回滚之前提交的某个点，-生成一个新的提交点" class="headerlink" title="3. 回滚之前提交的某个点， 生成一个新的提交点"></a>3. 回滚之前提交的某个点， 生成一个新的提交点</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git revert 1b30859</div></pre></td></tr></table></figure>
+<p>如果这个点是之前<code>merge</code>的点，<code>Git</code>会抱怨：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">is a merge but no -m option was given</div></pre></td></tr></table></figure></p>
+<p>这是因为你<code>revert</code>的那个<code>commit</code>是一个<code>merge commit</code>，它有两个<code>parent</code>, <code>Git</code>不知道<code>base</code>是选哪个<code>parent</code>，就没法<code>diff</code>，所以就抱怨了，所以你要显示告诉<code>Git</code>用哪一个<code>parent</code>。</p>
+<p>一般来说，如果你在<code>master</code>上<code>merge</code>  develop,那么<code>parent 1</code>就是<code>master</code>，<code>parent 2</code>就是<code>develop</code>.</p>
+<p>所以你需要执行这样的<code>revert</code>命令:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">//如果你现在在master上， 它的意思就是将这个点从master上回退掉</div><div class="line">git revert 1b30859 -m 1</div></pre></td></tr></table></figure></p>
+<p>此时使用下面命令可以详细查看相应的父分支的点：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">git show 1b30859</div><div class="line">//Merge: 312a518 fa87415 //312a518和fa87415 可以在git log中找到对应的提交信息</div></pre></td></tr></table></figure></p>
+<p><code>revert</code>点g的前后效果图：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">a -&gt; b -&gt; c -&gt; f -- g -&gt; h (master)</div><div class="line">           \      /</div><div class="line">            d -&gt; e  (dev)</div></pre></td></tr></table></figure></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">a -&gt; b -&gt; c -&gt; f -- g -&gt; h -&gt; G (master)</div><div class="line">           \      /</div><div class="line">            d -&gt; e  (dev)</div></pre></td></tr></table></figure>
+<p>其中<code>G</code> 是撤销 <code>g</code> 生成的 <code>commit</code>。通过 <code>git show G</code> 之后，我们会发现 <code>G</code> 是一个常规提交，内容就是撤销 <code>merge</code> 时被丢弃的那条线索的所有<code>commit</code> 的「反操作」的合集。</p>
+<h4 id="4-取消某次merge的内容"><a href="#4-取消某次merge的内容" class="headerlink" title="4. 取消某次merge的内容"></a>4. 取消某次merge的内容</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git merge --abort</div></pre></td></tr></table></figure>
+<h3 id="分支编辑"><a href="#分支编辑" class="headerlink" title="分支编辑"></a>分支编辑</h3><h4 id="1-如果当前分支既有未从远程pull下来的代码，-又有本地已经commit的代码，-即分支上出现一上一下箭头，-采用如下命令"><a href="#1-如果当前分支既有未从远程pull下来的代码，-又有本地已经commit的代码，-即分支上出现一上一下箭头，-采用如下命令" class="headerlink" title="1. 如果当前分支既有未从远程pull下来的代码， 又有本地已经commit的代码， 即分支上出现一上一下箭头， 采用如下命令"></a>1. 如果当前分支既有未从远程pull下来的代码， 又有本地已经commit的代码， 即分支上出现一上一下箭头， 采用如下命令</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git rebase origin/develop</div></pre></td></tr></table></figure>
+<blockquote>
+<p>rebase的原理相当于三步：</p>
+<pre><code>1. 将我们的分支退回到上次和服务器同步时的状态  即 reset
+2. 将reset之后的代码Stash一份
+3. 与服务器进行同步，同步之后再将原来的Stash的代码吐出来和与服务器同步之后的代码进行合并
+</code></pre></blockquote>
+<p>这样就不会造成下面的出现拐角的分支（也就是说我们在进行push的时候发现服务器里面有新代码，这时候不要执行pull命令。而是执行rebase命令则会将分支成一条直线）</p>
+<h4 id="2-想在某条分支上移动某个分支"><a href="#2-想在某条分支上移动某个分支" class="headerlink" title="2. 想在某条分支上移动某个分支"></a>2. 想在某条分支上移动某个分支</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">      A---B---C topic</div><div class="line">     /</div><div class="line">D---E---F---G develop</div></pre></td></tr></table></figure>
+<p>例如有一条分支develop，topic是从develop上拉出来的分支，这时候我想把topic分支从E点移动到F点，那要怎么操作呢？</p>
+<ol>
+<li>第一步：先将分支切到F点，暂且叫做temp分支。</li>
+<li>使用命令<code>git rebase temp topic</code>.此时topic分支会被移动到F点，且分支已被切换到topic分支，但是此时topic分支可能显示不正常有上下箭头，这是因为切换的这个topic分支已经不是原来的topic分支了，git创建了一个全新的分支并命名为topic，所以此时需要把远程的topic分支删掉，然后将本地的topic分支push到远程，则万事大吉了。</li>
+</ol>
+<p>执行之后会得到如下的结果：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">          A---B---C topic</div><div class="line">         /</div><div class="line">D---E---F---G develop</div></pre></td></tr></table></figure></p>
+<blockquote>
+<p>NOTE<br><a href="https://git-scm.com/docs/git-rebase" target="_blank" rel="external">git-rebase - Reapply commits on top of another base tip</a></p>
+</blockquote>
+<h4 id="3-想将某条分支上拉出的分支移动到另一个分支的某个点"><a href="#3-想将某条分支上拉出的分支移动到另一个分支的某个点" class="headerlink" title="3. 想将某条分支上拉出的分支移动到另一个分支的某个点"></a>3. 想将某条分支上拉出的分支移动到另一个分支的某个点</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">                        H---I---J topicB</div><div class="line">                       /</div><div class="line">              E---F---G  topicA</div><div class="line">             /</div><div class="line">A---B---C---D  develop</div></pre></td></tr></table></figure>
+<p>例如有一条分支develop，从develop上拉出了一条分支topicA，从topicA分支上拉出了一条分支topicB,此时如果我想将topicB分支移动到develop上的C点怎么操作呢？</p>
+<ol>
+<li>第一步：先将分支切到C点，暂且叫做temp分支。</li>
+<li>使用命令<code>git rebase --onto temp topicA topicB</code>。<br>意思就是将目前存在于topicA上的分支topicB移动到temp分支上，也就是移动到develop分支上的C点。</li>
+<li>合并过程中如果有冲突则会立马停止，这时候要去解决冲突，解决完冲突之后使用命令<code>rebase --continue</code>继续分支分编辑操作。</li>
+</ol>
+<p><strong>注意</strong><br>一定要注意，如果分支像下面这样,<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">                        H---I---J topicB</div><div class="line">                       /         \</div><div class="line">              E---F---G---K---L---M---N---O---P  topicA</div><div class="line">             /</div><div class="line">A---B---C---D  develop</div></pre></td></tr></table></figure></p>
+<p>此时想要将topicB分支移动到develop上的C点，就不能直接那么干了，不然你会发现坑大了，如果你还是按上面的操作，你会发现分支变成了下面这样：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">              E---F---G---K---L---M---N---O---P  topicA</div><div class="line">             /</div><div class="line">A---B---C---D  develop</div><div class="line">         \ </div><div class="line">          H---I---J---M---N---O---P  topicB</div></pre></td></tr></table></figure></p>
+<p>为什么会这样呢？<br>推测：<code>git rebase --onto temp topicA topicB</code>这个命令可能是把topicA从topicB分支上的起始点开始到终点（露头的点），也就是包含topicB上的几个点。</p>
+<blockquote>
+<p>NOTE<br>对于想要使用<code>git rebase --onto temp topicA topicB</code>该命令一定是露头的分支，不能是起始点在某个分支上，同时该分支也被merge到了该分支上。如果是这样的就需要先把该分支已经merge的点退掉，将需要迁移的分支漏出来，再进行编辑。（怀疑如果是merge到了其他分支上应该是没问题的，这个没试过，暂不确定）</p>
+</blockquote>
+<p><strong>参考</strong>：<br><a href="https://git-scm.com/docs/git-rebase" target="_blank" rel="external">git-rebase - Reapply commits on top of another base tip</a></p>
+<h3 id="其他操作"><a href="#其他操作" class="headerlink" title="其他操作"></a>其他操作</h3><h4 id="1-想要对之前已经进行过git-ignore操作的文件再次添加进git管理中，-执行如下操作"><a href="#1-想要对之前已经进行过git-ignore操作的文件再次添加进git管理中，-执行如下操作" class="headerlink" title="1. 想要对之前已经进行过git ignore操作的文件再次添加进git管理中， 执行如下操作"></a>1. 想要对之前已经进行过git ignore操作的文件再次添加进git管理中， 执行如下操作</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git add 文件路径 -f</div></pre></td></tr></table></figure>
+<h4 id="2-强制push某个点到远程"><a href="#2-强制push某个点到远程" class="headerlink" title="2. 强制push某个点到远程"></a>2. 强制push某个点到远程</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git push --force origin develop</div></pre></td></tr></table></figure>
+<blockquote>
+<p><code>此命令小心使用</code></p>
+</blockquote>
+<h4 id="3-第一次将从某个分支拉出来的分支合到这个分支上的时候，-容易出现拉成直线的情况，-这时候要执行下面的操作"><a href="#3-第一次将从某个分支拉出来的分支合到这个分支上的时候，-容易出现拉成直线的情况，-这时候要执行下面的操作" class="headerlink" title="3. 第一次将从某个分支拉出来的分支合到这个分支上的时候， 容易出现拉成直线的情况， 这时候要执行下面的操作"></a>3. 第一次将从某个分支拉出来的分支合到这个分支上的时候， 容易出现拉成直线的情况， 这时候要执行下面的操作</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git merge --no-ff -m &quot;货基转股基_4.90.01&quot; 货基转股基_4.90.01</div></pre></td></tr></table></figure>
+<blockquote>
+<p>这句命令的意思就是：(假设目前在develop分支上) 这是第一次merge,  我想要把 货基转股基_4.90.01 分支merge到develop分支上。 <code>--no-ff</code>参数，表示禁用<code>Fast forward</code>, 因为本次合并要创建一个新的commit，所以加上<code>-m</code>参数，把commit描述写进去。</p>
+</blockquote>
+<p>这里还有一种简单的方法， 直接在界面操作<br><figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="https://raw.githubusercontent.com/XZwalk/MarkdownImages/master/12.png" alt="Alt text" title="">
+                </div>
+                <div class="image-caption">Alt text</div>
+            </figure><br>第一次merge的时候只要打上这个勾勾就可以了。</p>
+<h4 id="4-删除本地SourceTree中远程分支目录里面已经被删除的分支"><a href="#4-删除本地SourceTree中远程分支目录里面已经被删除的分支" class="headerlink" title="4. 删除本地SourceTree中远程分支目录里面已经被删除的分支"></a>4. 删除本地SourceTree中远程分支目录里面已经被删除的分支</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git fetch -p</div></pre></td></tr></table></figure>
+<blockquote>
+<p>它的意思就是在fetch之后删除掉没有与远程分支对应的本地分支。</p>
+</blockquote>
+<h4 id="5-重命名远程分支"><a href="#5-重命名远程分支" class="headerlink" title="5. 重命名远程分支"></a>5. 重命名远程分支</h4><p>在git中重命名远程分支，其实就是先删除远程分支，然后重命名本地分支，再重新提交一个远程分支。</p>
+<h4 id="6-从Git仓库中恢复已删除的分支或丢失的commit"><a href="#6-从Git仓库中恢复已删除的分支或丢失的commit" class="headerlink" title="6. 从Git仓库中恢复已删除的分支或丢失的commit"></a>6. 从Git仓库中恢复已删除的分支或丢失的commit</h4><p>使用这条命令的前提是你曾经将这个点提交过或者push过<br><figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="https://raw.githubusercontent.com/MarkdownImages/MarkdownImages/master/%E5%B9%B3%E5%B8%B8%E9%9B%B6%E6%95%A3%E5%9B%BE/git%E6%89%BE%E5%9B%9E%E5%8E%86%E5%8F%B2%E8%AE%B0%E5%BD%95.png" alt="" title="">
+                </div>
+                <div class="image-caption"></div>
+            </figure></p>
+<h4 id="7-关于vim窗口的使用"><a href="#7-关于vim窗口的使用" class="headerlink" title="7. 关于vim窗口的使用"></a>7. 关于vim窗口的使用</h4><p>开始用git commit 提交的时候是用 -m “message”的</p>
+<p>后来直接用git commit 回车后弹出一个窗口，后来才知道是linux下的文本编辑器</p>
+<p>郁闷的是半天退出不出来，baidu，google一番，</p>
+<p>进入之后是VIM的普通模式，按 i 键，进入INSERT模式，这是可以输入message了。</p>
+<p>输入完成之后，按ESC键进入命令模式 ，输入冒号（在窗口下面显示），然后输入x，回车就OK了。</p>
+<h2 id="七、git命令合集"><a href="#七、git命令合集" class="headerlink" title="七、git命令合集"></a>七、git命令合集</h2><p>一张酷图帮你收集齐所有git命令<br><figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="https://raw.githubusercontent.com/XZwalk/MarkdownImages/master/13.jpg" alt="Alt text" title="">
+                </div>
+                <div class="image-caption">Alt text</div>
+            </figure></p>
+
+        </div>
+
+        <blockquote class="post-copyright">
+    <div class="content">
+        
+<span class="post-time">
+    最后更新时间：<time datetime="2017-06-19T09:51:04.058Z" itemprop="dateUpdated">2017-06-19 17:51:04</time>
+</span><br>
+
+
+        
+        欢迎打赏！
+        
+    </div>
+    <footer>
+        <a href="https://markdownimages.github.io">
+            <img src="/img/avatar.jpg" alt="祥子">
+            祥子
+        </a>
+    </footer>
+</blockquote>
+
+        
+<div class="page-reward">
+    <a id="rewardBtn" href="javascript:;" class="page-reward-btn waves-effect waves-circle waves-light">赏</a>
+</div>
+
+
+
+        <div class="post-footer">
+            
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/git/">git</a></li></ul>
+
+
+            
+<div class="page-share-wrap">
+    
+
+<div class="page-share" id="pageShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://markdownimages.github.io/2017/06/19/技术文档/iOS/工具/git的使用/&title=《git的使用》 — ZXWalk&pic=https://markdownimages.github.io/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://markdownimages.github.io/2017/06/19/技术文档/iOS/工具/git的使用/&title=《git的使用》 — ZXWalk&source=我是一只小小小小鸟......" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://markdownimages.github.io/2017/06/19/技术文档/iOS/工具/git的使用/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《git的使用》 — ZXWalk&url=https://markdownimages.github.io/2017/06/19/技术文档/iOS/工具/git的使用/&via=https://markdownimages.github.io" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://markdownimages.github.io/2017/06/19/技术文档/iOS/工具/git的使用/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+
+    <a href="javascript:;" id="shareFab" class="page-share-fab waves-effect waves-circle">
+        <i class="icon icon-share-alt icon-lg"></i>
+    </a>
+</div>
+
+
+
+        </div>
+    </div>
+
+    
+<nav class="post-nav flex-row flex-justify-between flex-row-reverse">
+  
+
+  
+    <div class="waves-block waves-effect next">
+      <a href="/2017/06/15/Hexo/Linux下搭建Hexo博客/" id="post-next" class="post-nav-link">
+        <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
+        <h4 class="title">Linux下搭建Hexo博客</h4>
+      </a>
+    </div>
+  
+</nav>
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+<div id="reward" class="page-modal reward-lay">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <h3 class="reward-title">
+        <i class="icon icon-quote-left"></i>
+        谢谢大爷~
+        <i class="icon icon-quote-right"></i>
+    </h3>
+    <ul class="reward-items">
+        
+        <li>
+            <img src="/img/wechat.jpg" title="微信打赏二维码" alt="微信打赏二维码">
+            <p>微信</p>
+        </li>
+        
+
+        
+        <li>
+            <img src="/img/alipay.jpg" title="支付宝打赏二维码" alt="支付宝打赏二维码">
+            <p>支付宝</p>
+        </li>
+        
+    </ul>
+</div>
+
+
+
+</div>
+
+        <footer class="footer">
+    <div class="top">
+        
+<p>
+    <span id="busuanzi_container_site_uv" style='display:none'>
+        站点总访客数：<span id="busuanzi_value_site_uv"></span>
+    </span>
+    <span id="busuanzi_container_site_pv" style='display:none'>
+        站点总访问量：<span id="busuanzi_value_site_pv"></span>
+    </span>
+</p>
+
+
+        <p>
+            
+                <span><a href="/atom.xml" target="_blank" class="rss" title="rss"><i class="icon icon-lg icon-rss"></i></a></span>
+            
+            <span>博客内容遵循<a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">知识共享 署名 - 非商业性 - 相同方式共享 4.0 国际协议</a></span>
+        </p>
+    </div>
+    <div class="bottom">
+        <p>
+            <span>Power by <a href="http://hexo.io/" target="_blank">Hexo</a> Theme <a href="https://github.com/yscoder/hexo-theme-indigo" target="_blank">indigo</a></span>
+            <span>祥子 &copy; 2015 - 2017</span>
+        </p>
+    </div>
+</footer>
+
+    </main>
+    <div class="mask" id="mask"></div>
+<a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-chevron-up"></span></a>
+
+
+
+<div class="global-share" id="globalShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://markdownimages.github.io/2017/06/19/技术文档/iOS/工具/git的使用/&title=《git的使用》 — ZXWalk&pic=https://markdownimages.github.io/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://markdownimages.github.io/2017/06/19/技术文档/iOS/工具/git的使用/&title=《git的使用》 — ZXWalk&source=我是一只小小小小鸟......" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://markdownimages.github.io/2017/06/19/技术文档/iOS/工具/git的使用/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《git的使用》 — ZXWalk&url=https://markdownimages.github.io/2017/06/19/技术文档/iOS/工具/git的使用/&via=https://markdownimages.github.io" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://markdownimages.github.io/2017/06/19/技术文档/iOS/工具/git的使用/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+<div class="page-modal wx-share" id="wxShare">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAN4AAADeCAAAAAB3DOFrAAACqElEQVR42u3awW5qMQwEUP7/p9vte6qgM3ZCWRxWiMIlJ5VuzNiPR/z4+ufx8/XX7//52Wevv77ys3ceeODh4eEtlt4uqF1i8u2v35mvGQ8PD+82L7lcsqzX+ASQbGKxoXh4eHgfyUvK6Pb6+Sbi4eHhfT6vZScHRnuo4OHh4X0CLwkjZhFDvtw/zlrw8PDwYl7eRfqc51f6e3h4eHjrrnoeBNw+ToarxcPDw7vA2zf4Z9Rk6UnAkWwQHh4e3m1ePm6VN/UTWFLKzwJfPDw8vLO8fMgpX0oSrbaDArNDAg8PD+8eb3MT30exbfBRrB8PDw/vGq9tus8Gqtqoon09monAw8PDW/PaW/++U58cG3mhXzfA8PDw8Na8WWv/VIhwalufXg0PDw/vMq8NC/Ib+mxAIS/Wf2mA4eHh4R3ltWHuLESYDVHNCnQ8PDy8d/LaRcyWuPnrMGjGw8PDu8CbhRHD23Qc4+ZRyGMoxsPDwzvDy+OAfUNr1vQa/pPw8PDwDvHayLWNHvahxiouwcPDw7vAmy0iH3vatMTaCAMPDw/vPbzNATA7BtowdzN2gIeHh3eDtymXZ82qNlzIt/iXa+Lh4eEd4s0aV/uieRNGFCOteHh4eBd4m0I5X2g7HLCJNvDw8PDeyUsK4nbgIG+M5WME9dGCh4eHd43XtqBOUZMwd9NIw8PDw3sPb1NGJ0dLsgWnQl48PDy8s7zNj//XhXK+3GgurDwe/kup8fDw8I7y2htu/vXtAZAHEPlzPDw8vHu85DA41eafbdkqksDDw8O7xsvL5bawbj/VnmDRwYCHh4f3p7y2UE7K7nZbi+ADDw8P7wN4eXywp7YlOB4eHt47eUkYkSDbsYB92yyajMDDw8M7ymt/8Le8zfvzo2g1sIWHh4eX8r4BM/RobQg8V/UAAAAASUVORK5CYII=" alt="微信分享二维码">
+</div>
+
+
+
+
+    <script src="//cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script>
+<script>
+var BLOG = { ROOT: '/', SHARE: true, REWARD: true };
+
+
+
+</script>
+
+<script src="//unpkg.com/hexo-theme-material-indigo@latest/js/main.min.js"></script>
+
+
+<div class="search-panel" id="search-panel">
+    <ul class="search-result" id="search-result"></ul>
+</div>
+<template id="search-tpl">
+<li class="item">
+    <a href="{path}" class="waves-block waves-effect">
+        <div class="title ellipsis" title="{title}">{title}</div>
+        <div class="flex-row flex-middle">
+            <div class="tags ellipsis">
+                {tags}
+            </div>
+            <time class="flex-col time">{date}</time>
+        </div>
+    </a>
+</li>
+</template>
+
+<script src="//unpkg.com/hexo-theme-material-indigo@latest/js/search.min.js" async></script>
+
+
+
+
+
+
+<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+
+
+</body>
+</html>
