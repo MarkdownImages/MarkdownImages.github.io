@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://markdownimages.github.io/"/>
-  <updated>2017-06-20T02:42:24.718Z</updated>
+  <updated>2017-06-20T02:46:15.573Z</updated>
   <id>https://markdownimages.github.io/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="https://markdownimages.github.io/2017/06/20/%E6%8A%80%E6%9C%AF%E6%96%87%E6%A1%A3/iOS/%E6%A1%86%E6%9E%B6%E6%8A%80%E6%9C%AF/%E5%AE%89%E8%A3%85%E5%8C%85%E7%98%A6%E8%BA%AB/"/>
     <id>https://markdownimages.github.io/2017/06/20/技术文档/iOS/框架技术/安装包瘦身/</id>
     <published>2017-06-20T02:40:47.000Z</published>
-    <updated>2017-06-20T02:42:24.718Z</updated>
+    <updated>2017-06-20T02:46:15.573Z</updated>
     
     <content type="html"><![CDATA[<h1 id="安装包瘦身"><a href="#安装包瘦身" class="headerlink" title="安装包瘦身"></a>安装包瘦身</h1><p>近期我们的主应用收到了appStore的邮件，说项目超过了100ｍ，需要瘦身。其实当应用超过100m的时候只是说不能使用流量下载，只能在wifi环境下下载，其他的倒是没什么影响，但是毕竟是用户超过几千万的应用，所以主应用要求我们sdk要进行瘦身，目标至少20%。</p>
 <p>收到这个任务以后，我们就着手进行处理。主要从以下几个方面。</p>
@@ -113,7 +113,7 @@
 <blockquote>
 <p>NOTE<br>为了防止上面的脚本在访问的时候失效，特地做了备份，失效了可以访问我的<a href="https://github.com/MarkdownImages/MarkdownImages/tree/master/iOS%E5%BC%80%E5%8F%91/app%E7%98%A6%E8%BA%AB" target="_blank" rel="external">git地址</a></p>
 </blockquote>
-<h2 id="参考-3"><a href="#参考-3" class="headerlink" title="参考"></a>参考</h2><p><a href="http://tmq.qq.com/2016/11/mobileapp_reduceprogram-2/" target="_blank" rel="external">手机APP安装包缩减方案</a><br><a href="https://github.com/LeoMobileDeveloper/Blogs/blob/master/iOS/iOS%E7%BC%96%E8%AF%91%E8%BF%87%E7%A8%8B%E7%9A%84%E5%8E%9F%E7%90%86%E5%92%8C%E5%BA%94%E7%94%A8.md" target="_blank" rel="external">iOS编译过程的原理和应用</a><br><a href="http://blog.cnbang.net/tech/2544/" target="_blank" rel="external">iOS可执行文件瘦身方法</a><br><a href="https://github.com/Damonvvong/iOSDevNotes/blob/master/Notes/AppBetter_1.md" target="_blank" rel="external">我的 App 『减肥计划』(一)</a><br><a href="http://www.zoomfeng.com/blog/ipa-size-thin.html" target="_blank" rel="external">《iOS安装包瘦身指南》</a><br><a href="https://mp.weixin.qq.com/s?__biz=MzAwNDY1ODY2OQ==&amp;mid=207986417&amp;idx=1&amp;sn=77ea7d8e4f8ab7b59111e78c86ccfe66&amp;scene=0&amp;key=dffc561732c226510c6c6a2ae7a6c92d2f42b941e05f1e3e8624461eec866b962cf3ee5e02f2f695578cc616a6c429d2&amp;ascene=0&amp;uin=NTk4MzU3OTAw&amp;devicetype=iMac+MacBookPro12%2C1+OSX+OSX+10.10.5+build(14F27" target="_blank" rel="external">iOS微信安装包瘦身</a>&amp;version=11020201&amp;pass_ticket=1IEMaQ6RFKDH5CBSqTcMjggMcTG%2FEP1%2FySQBS3DPQaTtjNPY%2BJcx8V23YHqYtG1V)<br><a href="http://www.ctolib.com/topics-65758.html" target="_blank" rel="external">总结下在iOS瘦身上的一些方向和优化点</a><br><a href="https://techblog.toutiao.com/2016/12/27/iphone/" target="_blank" rel="external">iPhone安装包的优化</a></p>
+<h2 id="参考-3"><a href="#参考-3" class="headerlink" title="参考"></a>参考</h2><p><a href="http://tmq.qq.com/2016/11/mobileapp_reduceprogram-2/" target="_blank" rel="external">手机APP安装包缩减方案</a><br><a href="https://github.com/LeoMobileDeveloper/Blogs/blob/master/iOS/iOS%E7%BC%96%E8%AF%91%E8%BF%87%E7%A8%8B%E7%9A%84%E5%8E%9F%E7%90%86%E5%92%8C%E5%BA%94%E7%94%A8.md" target="_blank" rel="external">iOS编译过程的原理和应用</a><br><a href="http://blog.cnbang.net/tech/2544/" target="_blank" rel="external">iOS可执行文件瘦身方法</a><br><a href="https://github.com/Damonvvong/iOSDevNotes/blob/master/Notes/AppBetter_1.md" target="_blank" rel="external">我的 App 『减肥计划』(一)</a><br><a href="http://www.zoomfeng.com/blog/ipa-size-thin.html" target="_blank" rel="external">《iOS安装包瘦身指南》</a><br><a href="https://mp.weixin.qq.com/s?__biz=MzAwNDY1ODY2OQ==&amp;mid=207986417&amp;idx=1&amp;sn=77ea7d8e4f8ab7b59111e78c86ccfe66&amp;3rd=MzA3MDU4NTYzMw==&amp;scene=6#rd" target="_blank" rel="external">iOS微信安装包瘦身</a><br><a href="http://www.ctolib.com/topics-65758.html" target="_blank" rel="external">总结下在iOS瘦身上的一些方向和优化点</a><br><a href="https://techblog.toutiao.com/2016/12/27/iphone/" target="_blank" rel="external">iPhone安装包的优化</a></p>
 ]]></content>
     
     <summary type="html">
