@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://markdownimages.github.io/"/>
-  <updated>2017-06-19T09:51:04.058Z</updated>
+  <updated>2017-06-20T02:39:14.109Z</updated>
   <id>https://markdownimages.github.io/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="https://markdownimages.github.io/2017/06/19/%E6%8A%80%E6%9C%AF%E6%96%87%E6%A1%A3/iOS/%E5%B7%A5%E5%85%B7/git%E7%9A%84%E4%BD%BF%E7%94%A8/"/>
     <id>https://markdownimages.github.io/2017/06/19/技术文档/iOS/工具/git的使用/</id>
     <published>2017-06-19T09:44:31.000Z</published>
-    <updated>2017-06-19T09:51:04.058Z</updated>
+    <updated>2017-06-20T02:39:14.109Z</updated>
     
     <content type="html"><![CDATA[<p>#git的使用</p>
 <p><strong>git</strong>是一款免费、开源的分布式版本控制系统，用于敏捷高效地处理任何或小或大的项目。Git是一个开源的分布式版本控制系统，用以有效、高速的 处理从很小到非常大的项目版本管理。 Git 是 Linus Torvalds 为了帮助管理 Linux 内核开发而开发的一个开放源码的版本控制软件。这里附上一个不错的学习git的网站 <a href="http://git-scm.com/book/zh/v1" target="_blank" rel="external">git 使用手册</a></p>
@@ -236,6 +236,10 @@
 <p>郁闷的是半天退出不出来，baidu，google一番，</p>
 <p>进入之后是VIM的普通模式，按 i 键，进入INSERT模式，这是可以输入message了。</p>
 <p>输入完成之后，按ESC键进入命令模式 ，输入冒号（在窗口下面显示），然后输入x，回车就OK了。</p>
+<h4 id="8-解决github-push错误The-requested-URL-returned-error-403-Forbidden-while-accessing"><a href="#8-解决github-push错误The-requested-URL-returned-error-403-Forbidden-while-accessing" class="headerlink" title="8. 解决github push错误The requested URL returned error: 403 Forbidden while accessing"></a>8. 解决github push错误The requested URL returned error: 403 Forbidden while accessing</h4><p>cd到你的代码路径下<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">vim .Git/config</div></pre></td></tr></table></figure></p>
+<p>修改<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">[remote &quot;origin&quot;]  </div><div class="line">    url = https://github.com/wangxiusen/wangxiusen.github.io.git</div></pre></td></tr></table></figure></p>
+<p>为<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">[remote &quot;origin&quot;]  </div><div class="line">    url = https://wangxiusen@github.com/wangxiusen/wangxiusen.github.io.git</div></pre></td></tr></table></figure></p>
+<p>然后<code>ESC</code> <code>:wq</code>保存退出。<br>再次<code>git push</code>，弹出框输入密码，即可提交。</p>
 <h2 id="七、git命令合集"><a href="#七、git命令合集" class="headerlink" title="七、git命令合集"></a>七、git命令合集</h2><p>一张酷图帮你收集齐所有git命令<br><figure class="image-bubble">
                 <div class="img-lightbox">
                     <div class="overlay"></div>
