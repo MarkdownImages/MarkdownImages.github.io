@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+
+    
+
+    
+
+
+
+    <meta charset="utf-8">
+    
+    
+    
+    <title>安装包瘦身 | ZXWalk | 不忘初心 方得始终</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <meta name="theme-color" content="#FE5D4E">
+    
+    
+    <meta name="keywords" content="优化">
+    <meta name="description" content="安装包瘦身近期我们的主应用收到了appStore的邮件，说项目超过了100ｍ，需要瘦身。其实当应用超过100m的时候只是说不能使用流量下载，只能在wifi环境下下载，其他的倒是没什么影响，但是毕竟是用户超过几千万的应用，所以主应用要求我们sdk要进行瘦身，目标至少20%。 收到这个任务以后，我们就着手进行处理。主要从以下几个方面。 一、资源文件1.删除无用资源解压ipa文件，检查是否有无用资源存在">
+<meta name="keywords" content="优化">
+<meta property="og:type" content="article">
+<meta property="og:title" content="安装包瘦身">
+<meta property="og:url" content="https://markdownimages.github.io/2017/06/20/技术文档/iOS/框架技术/安装包瘦身/index.html">
+<meta property="og:site_name" content="ZXWalk">
+<meta property="og:description" content="安装包瘦身近期我们的主应用收到了appStore的邮件，说项目超过了100ｍ，需要瘦身。其实当应用超过100m的时候只是说不能使用流量下载，只能在wifi环境下下载，其他的倒是没什么影响，但是毕竟是用户超过几千万的应用，所以主应用要求我们sdk要进行瘦身，目标至少20%。 收到这个任务以后，我们就着手进行处理。主要从以下几个方面。 一、资源文件1.删除无用资源解压ipa文件，检查是否有无用资源存在">
+<meta property="og:image" content="http://www.zoomfeng.com/images/2016/10/12/4.png">
+<meta property="og:updated_time" content="2017-06-20T02:42:24.718Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="安装包瘦身">
+<meta name="twitter:description" content="安装包瘦身近期我们的主应用收到了appStore的邮件，说项目超过了100ｍ，需要瘦身。其实当应用超过100m的时候只是说不能使用流量下载，只能在wifi环境下下载，其他的倒是没什么影响，但是毕竟是用户超过几千万的应用，所以主应用要求我们sdk要进行瘦身，目标至少20%。 收到这个任务以后，我们就着手进行处理。主要从以下几个方面。 一、资源文件1.删除无用资源解压ipa文件，检查是否有无用资源存在">
+<meta name="twitter:image" content="http://www.zoomfeng.com/images/2016/10/12/4.png">
+    
+        <link rel="alternate" type="application/atom+xml" title="ZXWalk" href="/atom.xml">
+    
+    <link rel="shortcut icon" href="/img/favicon.ico">
+    <link rel="stylesheet" href="//unpkg.com/hexo-theme-material-indigo@latest/css/style.css">
+    <script>window.lazyScripts=[]</script>
+</head>
+
+<body>
+    <div id="loading" class="active"></div>
+
+    <aside id="menu" class="hide" >
+  <div class="inner flex-row-vertical">
+    <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
+        <i class="icon icon-lg icon-close"></i>
+    </a>
+    <div class="brand-wrap" style="background-image:url(/img/brand.jpg)">
+      <div class="brand">
+        <a href="/" class="avatar waves-effect waves-circle waves-light">
+          <img src="/img/avatar.jpg">
+        </a>
+        <hgroup class="introduce">
+          <h5 class="nickname">祥子</h5>
+          <a href="mailto:960376043@qq.com" title="960376043@qq.com" class="mail">960376043@qq.com</a>
+        </hgroup>
+      </div>
+    </div>
+    <div class="scroll-wrap flex-col">
+      <ul class="nav">
+        
+            <li class="waves-block waves-effect">
+              <a href="/"  >
+                <i class="icon icon-lg icon-home"></i>
+                主页
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/archives"  >
+                <i class="icon icon-lg icon-archives"></i>
+                归档
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/tags"  >
+                <i class="icon icon-lg icon-tags"></i>
+                标签
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/categories"  >
+                <i class="icon icon-lg icon-th-list"></i>
+                分类
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://github.com/XZwalk" target="_blank" >
+                <i class="icon icon-lg icon-github"></i>
+                Github
+              </a>
+            </li>
+        
+      </ul>
+    </div>
+  </div>
+</aside>
+
+    <main id="main">
+        <header class="top-header" id="header">
+    <div class="flex-row">
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
+          <i class="icon icon-lg icon-navicon"></i>
+        </a>
+        <div class="flex-col header-title ellipsis">安装包瘦身</div>
+        
+        <div class="search-wrap" id="search-wrap">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
+                <i class="icon icon-lg icon-chevron-left"></i>
+            </a>
+            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="输入感兴趣的关键字">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="search">
+                <i class="icon icon-lg icon-search"></i>
+            </a>
+        </div>
+        
+        
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menuShare">
+            <i class="icon icon-lg icon-share-alt"></i>
+        </a>
+        
+    </div>
+</header>
+<header class="content-header post-header">
+
+    <div class="container fade-scale">
+        <h1 class="title">安装包瘦身</h1>
+        <h5 class="subtitle">
+            
+                <time datetime="2017-06-20T02:40:47.000Z" itemprop="datePublished" class="page-time">
+  2017-06-20
+</time>
+
+
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/iOS/">iOS</a></li></ul>
+
+            
+        </h5>
+    </div>
+
+    
+
+
+</header>
+
+
+<div class="container body-wrap">
+    
+    <aside class="post-widget">
+        <nav class="post-toc-wrap" id="post-toc">
+            <h4>TOC</h4>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#安装包瘦身"><span class="post-toc-number">1.</span> <span class="post-toc-text">安装包瘦身</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#一、资源文件"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">一、资源文件</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#1-删除无用资源"><span class="post-toc-number">1.1.1.</span> <span class="post-toc-text">1.删除无用资源</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#2-资源压缩"><span class="post-toc-number">1.1.2.</span> <span class="post-toc-text">2.资源压缩</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#3-H5页面远端化"><span class="post-toc-number">1.1.3.</span> <span class="post-toc-text">3.H5页面远端化</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#4-资源远端化"><span class="post-toc-number">1.1.4.</span> <span class="post-toc-text">4.资源远端化</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#5-使用Icon-Font"><span class="post-toc-number">1.1.5.</span> <span class="post-toc-text">5.使用Icon Font</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#6-使用WebP"><span class="post-toc-number">1.1.6.</span> <span class="post-toc-text">6.使用WebP</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#参考"><span class="post-toc-number">1.1.7.</span> <span class="post-toc-text">参考</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#二、Bitcode"><span class="post-toc-number">1.2.</span> <span class="post-toc-text">二、Bitcode</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#参考-1"><span class="post-toc-number">1.2.1.</span> <span class="post-toc-text">参考</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#二、编译选项优化"><span class="post-toc-number">1.3.</span> <span class="post-toc-text">二、编译选项优化</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#1-编译器优化级别"><span class="post-toc-number">1.3.1.</span> <span class="post-toc-text">1.编译器优化级别</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#2-去除符号信息"><span class="post-toc-number">1.3.2.</span> <span class="post-toc-text">2.去除符号信息</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#3-去掉异常支持"><span class="post-toc-number">1.3.3.</span> <span class="post-toc-text">3.去掉异常支持</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#参考-2"><span class="post-toc-number">1.3.4.</span> <span class="post-toc-text">参考</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#三、可执行文件瘦身"><span class="post-toc-number">1.4.</span> <span class="post-toc-text">三、可执行文件瘦身</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#1-无用类"><span class="post-toc-number">1.4.1.</span> <span class="post-toc-text">1.无用类</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#2-无用方法"><span class="post-toc-number">1.4.2.</span> <span class="post-toc-text">2.无用方法</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#3-扫描重复代码"><span class="post-toc-number">1.4.3.</span> <span class="post-toc-text">3. 扫描重复代码</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#4-功能重复的第三方库"><span class="post-toc-number">1.4.4.</span> <span class="post-toc-text">4.功能重复的第三方库</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#5-空函数及默认实现的函数都可以删掉"><span class="post-toc-number">1.4.5.</span> <span class="post-toc-text">5.空函数及默认实现的函数都可以删掉</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#6-第三方静态库或动态库的架构"><span class="post-toc-number">1.4.6.</span> <span class="post-toc-text">6.第三方静态库或动态库的架构</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#6-iOS瘦身之删除无用的mach-O文件"><span class="post-toc-number">1.4.7.</span> <span class="post-toc-text">6. iOS瘦身之删除无用的mach-O文件</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#7-统计项目中各工程在可执行文件的大小占比"><span class="post-toc-number">1.4.8.</span> <span class="post-toc-text">7.统计项目中各工程在可执行文件的大小占比</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#四、大致流程思路"><span class="post-toc-number">1.5.</span> <span class="post-toc-text">四、大致流程思路</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#参考-3"><span class="post-toc-number">1.6.</span> <span class="post-toc-text">参考</span></a></li></ol></li></ol>
+        </nav>
+    </aside>
+    
+<article id="post-技术文档/iOS/框架技术/安装包瘦身"
+  class="post-article article-type-post fade" itemprop="blogPost">
+
+    <div class="post-card">
+        <h1 class="post-card-title">安装包瘦身</h1>
+        <div class="post-meta">
+            <time class="post-time" title="2017-06-20 10:40:47" datetime="2017-06-20T02:40:47.000Z"  itemprop="datePublished">2017-06-20</time>
+
+            
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/iOS/">iOS</a></li></ul>
+
+
+
+            
+<span id="busuanzi_container_page_pv" title="文章总阅读量" style='display:none'>
+    <i class="icon icon-eye icon-pr"></i><span id="busuanzi_value_page_pv"></span>
+</span>
+
+
+            
+
+        </div>
+        <div class="post-content" id="post-content" itemprop="postContent">
+            <h1 id="安装包瘦身"><a href="#安装包瘦身" class="headerlink" title="安装包瘦身"></a>安装包瘦身</h1><p>近期我们的主应用收到了appStore的邮件，说项目超过了100ｍ，需要瘦身。其实当应用超过100m的时候只是说不能使用流量下载，只能在wifi环境下下载，其他的倒是没什么影响，但是毕竟是用户超过几千万的应用，所以主应用要求我们sdk要进行瘦身，目标至少20%。</p>
+<p>收到这个任务以后，我们就着手进行处理。主要从以下几个方面。</p>
+<h2 id="一、资源文件"><a href="#一、资源文件" class="headerlink" title="一、资源文件"></a>一、资源文件</h2><h3 id="1-删除无用资源"><a href="#1-删除无用资源" class="headerlink" title="1.删除无用资源"></a>1.删除无用资源</h3><p>解压ipa文件，检查是否有无用资源存在。</p>
+<p>现在应该没有APP需要支持iPhone4以下的机型了，所以1X的图片可以全部删掉。3X的图片是保留还是删掉看具体情况。</p>
+<p>重复的图片分两种，一种是名字一样的图片，如果你使用.xcassets来管理图片，那么Xcode的左边栏会有警告提示图片名字重复，直接按提示一一处理即可。另一种是名字不一样但是文件一样的图片，我们使用了一个Python脚本（@甘超江 大神出品）来扫描，每次编译的时候执行该脚本，如果有扫描命中则会让Xcode编译失败，此时需要人工去处理。需要注意的一点就是使用.xcassets来管理图片的时候回存在一个映射关系，通过imageNamed:方法使用的名字和图片的真实名字有可能不一样，脚本扫描的时候需要特别处理下。</p>
+<p>未使用的图片可以通过<a href="http://www.jianshu.com/p/a72d03e92c80" target="_blank" rel="external">LSUnusedResources</a>扫描出来，不过要注意的是可能会有误伤，该工具是全匹配，一些拼接名字来使用的图片要注意手动剔除。笔者就因为误删图片被惩罚过o(╯□╰)o</p>
+<p>一些音频、视频和多余的plist文件以及readme文件什么的目测只能肉眼扫描了，我们没用到这些资源暂时没这个问题。</p>
+<blockquote>
+<p>NOTE<br>这里也可以使用工具<a href="http://martiancraft.com/products/slender.html" target="_blank" rel="external">slender</a></p>
+</blockquote>
+<h3 id="2-资源压缩"><a href="#2-资源压缩" class="headerlink" title="2.资源压缩"></a>2.资源压缩</h3><p>首先是图片压缩，<a href="https://github.com/ImageOptim/ImageOptim" target="_blank" rel="external">ImageOptim</a>工具可以实现无损压缩。</p>
+<p>另外关于图片，建议使用Apple推荐的.xcassets来管理，它会把里边的所有png格式的图片压缩成一个Assets.car文件，压缩比率比其他方式管理图片要高。不过测试发现jpg图片不会在Assets.car文件里。</p>
+<p>另如果你有用到音频或视频资源，也可以考虑压缩。</p>
+<h3 id="3-H5页面远端化"><a href="#3-H5页面远端化" class="headerlink" title="3.H5页面远端化"></a>3.H5页面远端化</h3><p>如果你的H5有本地页面和资源，可以考虑全部远端化。本地资源主要是一些js、html文件和图片。</p>
+<h3 id="4-资源远端化"><a href="#4-资源远端化" class="headerlink" title="4.资源远端化"></a>4.资源远端化</h3><p>如果你本地有大量的图片资源或者其他乱七八糟的资源，则可考虑将一些不会影响用户体验同时兼顾服务器压力的资源放到远端，通过请求的方式去下载，之后在缓存到本地。</p>
+<h3 id="5-使用Icon-Font"><a href="#5-使用Icon-Font" class="headerlink" title="5.使用Icon Font"></a>5.使用Icon Font</h3><p>每个iconfont只是一小段文本，size要比图片形式的icon小一个数量级，我们可以像使用字体一样来使用图片。</p>
+<p>生成iconfont需要 矢量图 。一些网站提供生成iconfont的服务，比如<a href="https://icomoon.io/" target="_blank" rel="external">icomoon</a>和<a href="http://fontello.com/" target="_blank" rel="external">Fontello</a>。<a href="http://www.iconfont.cn/" target="_blank" rel="external">阿里巴巴矢量图标库</a>和<a href="http://www.easyicon.net/" target="_blank" rel="external">easyicon</a>提供大量优秀的矢量图。<br><a href="https://icomoon.io/" target="_blank" rel="external">icomoon</a>和<a href="http://fontello.com/" target="_blank" rel="external">Fontello</a>均可以通过导入SVG图标或者选择网站自身提供的图标来生成iconfont。值得一提的是，icomoon还可以生成PNG，PDF，CSH等格式。<br>在生成的文件夹中，可以找到扩展名为 .ttf 的字体集文件。</p>
+<h3 id="6-使用WebP"><a href="#6-使用WebP" class="headerlink" title="6.使用WebP"></a>6.使用WebP</h3><p>WebP是Google推的方案，无损压缩后的WebP比PNG少了45%的size，即使PNG经过其他工具压缩之后，WebP还是可以减少28%的size。SDWebImage实现了加载WebP格式图片的功能，但是没有做缓存功能，可能需要我们自己来实现了。</p>
+<h3 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h3><p><a href="https://github.com/PrideChung/FontAwesomeKit" target="_blank" rel="external">FontAwesomeKit</a><br><a href="http://johnwong.github.io/mobile/2015/04/03/using-icon-font-in-ios.html" target="_blank" rel="external">using-icon-font-in-ios</a></p>
+<h2 id="二、Bitcode"><a href="#二、Bitcode" class="headerlink" title="二、Bitcode"></a>二、Bitcode</h2><p>严格来说<code>App Thinning</code>不会让安装包变小，所以想通过这种方式来减小安装包的大小，就不要考虑了。但用户安装应用时，苹果会根据用户的机型自动选择合适的资源和对应CPU架构的二进制执行文件（也就是说用户本地可执行文件不会同时存在armv7和arm64），安装后空间占用更小。</p>
+<p>App Thinning 的其中一个方面是<code>Bitcode</code>。Bitcode有些抽象，但在本质上它也是苹果在用户下载前优化app的新方式。Bitcode使得app无论在何设备上都能快速高效地运行。Bitcode使用最新的编译器自动编译app并且针对特定架构进行优化。（例如，针对 iPhone 6s和 iPad Air 2等 64 位处理器的 arm64）</p>
+<p>Bitcode 不会下载应用针对不同架构的优化，而仅下载与特定设备相关的优化，使得下载量更小，同时与前文所述的 App Thinning 技术紧密合作。</p>
+<p>Bitcode 是 iOS 上较新的功能，对于新的项目需要手动开启。这可以通过选择Build Settings（编译设置）下的项目设置，将 bitcode 设为 YES 来完成。</p>
+<blockquote>
+<p>NOTE<br>需要注意的是，如果你想支持Bitcode，需要工程里面所有用到的静态库，动态库全部支持Bitcode（也就是生成编译的时候打开Bitcode选项），否则会导致开启失败。<br>同样，如果你是sdk，你开启了Bitcode，主应用未开启，也是没什么用的。</p>
+</blockquote>
+<h3 id="参考-1"><a href="#参考-1" class="headerlink" title="参考"></a>参考</h3><p><a href="https://developer.apple.com/library/content/documentation/IDEs/Conceptual/AppDistributionGuide/AppThinning/AppThinning.html#//apple_ref/doc/uid/TP40012582-CH35-SW3" target="_blank" rel="external">App Thinning</a><br><a href="http://www.cnblogs.com/XYQ-208910/p/6125237.html" target="_blank" rel="external">iOS:BitCode的介绍</a></p>
+<h2 id="二、编译选项优化"><a href="#二、编译选项优化" class="headerlink" title="二、编译选项优化"></a>二、编译选项优化</h2><h3 id="1-编译器优化级别"><a href="#1-编译器优化级别" class="headerlink" title="1.编译器优化级别"></a>1.编译器优化级别</h3><p>Build Settings-&gt;<code>Optimization Level</code>有几个编译优化选项，<code>release</code>版应该选择<code>Fastest, Smalllest</code>，这个选项会开启那些不增加代码大小的全部优化，并让可执行文件尽可能小。</p>
+<p><code>Strip Debug Symbols During Copy</code>:DEBUG下设为NO，RELEASE下设为YES<br>Strip Debug Symbols During Copy设置为YES时，打开对应.app文件的“显式包内容”，可以看到，/PlugIns/Today.appex文件的大小变小了。（不过这些只能在使用模拟器时奏效）<br><code>Strip Debug Symbols During Copy</code>置为YES的时候，today extension中的断点将不会中断，但是打印[NSThread callStackSymbols]时的类名和方法名还是可以看见的。</p>
+<p>Build Settings -&gt; <code>Dead Code Stripping</code> 设置成 Yes。<a href="https://stackoverflow.com/questions/23405186/is-it-bad-to-enable-dead-code-stripping" target="_blank" rel="external">参考</a><br>用于删除对象文件中不需要加载的符号，减小二进制文件大小</p>
+<p>Build Settings -&gt; <code>Use Separate Strip</code>设置为Yes。<a href="https://stackoverflow.com/questions/3276474/symbol-hiding-in-static-libraries-built-with-xcode-gcc" target="_blank" rel="external">参考</a><br>剥离静态库中的二进制符号。</p>
+<h3 id="2-去除符号信息"><a href="#2-去除符号信息" class="headerlink" title="2.去除符号信息"></a>2.去除符号信息</h3><p><code>Strip Linked Product / Deployment Postprocessing / Symbols Hidden by Default</code> <code>DEBUG</code>下设为<code>NO</code>，<code>RELEASE</code>下设为<code>YES</code>。</p>
+<blockquote>
+<p>NOTE<br>这个最有用的一个选项是<code>Deployment Postprocessing</code>和<code>Strip Linked Product</code>，两个需要都设置为YES才有用。原理是打开这两个选项后构建ipa会去除掉symbol符号，就是那些类名啊函数名啊啥的。这样子的影响就是运行时你没法进行线程回溯，符号都没了回溯了也是乱码。但是不会影响正常的崩溃日志生成和解析。在本机专门测试过，如果使用符号表来解析崩溃日志，则完全不受影响。<br><code>Symbols Hidden by Default</code>会把所有符号都定义成<code>private extern</code>，详细信息见<a href="https://developer.apple.com/library/content/documentation/DeveloperTools/Conceptual/MachOTopics/1-Articles/executing_files.html#//apple_ref/doc/uid/TP40001829-97021-TPXREF121" target="_blank" rel="external">官方文档</a>。这些选项目前都是XCode里release的默认选项，但旧版XCode生成的项目可能不是，可以检查一下。其他优化还可以参考官方文档—<a href="https://developer.apple.com/legacy/library/documentation/Performance/Conceptual/CodeFootprint/CodeFootprint.pdf" target="_blank" rel="external">CodeFootprint.pdf</a><br><strong>特别注意：</strong><br><code>Generate Debug Symbols</code>这个选项千万不能设置为NO（默认为YES），设置为NO的时候会拿不到DSYM，也就解析不到崩溃日志信息了。</p>
+</blockquote>
+<h3 id="3-去掉异常支持"><a href="#3-去掉异常支持" class="headerlink" title="3.去掉异常支持"></a>3.去掉异常支持</h3><p><code>Enable C++ Exceptions</code>和<code>Enable Objective-C Exceptions</code>设为NO，并且Other C Flags添加-fno-exceptions，可执行文件减少了27M，其中<strong>gcc_except_tab段减少了17.3M，</strong>text减少了9.7M，效果特别明显。可以对某些文件单独支持异常，编译选项加上-fexceptions即可。但有个问题，假如ABC三个文件，AC文件支持了异常，B不支持，如果C抛了异常，在模拟器下A还是能捕获异常不至于Crash，但真机下捕获不了（有知道原因可以在下面留言：）。去掉异常后，Appstore后续几个版本Crash率没有明显上升。个人认为关键路径支持异常处理就好，像启动时NSCoder读取setting配置文件得要支持捕获异常，等等</p>
+<blockquote>
+<p>NOTE<br>经实测不行。因为将<code>Enable Objective-C Exceptions</code>设为<code>NO</code>以后无法使用｀try catch｀，按照编译选项加上<code>-fexceptions</code>，实际上并不行，故而失败。</p>
+</blockquote>
+<p><strong>需要注意的是：</strong><br>如果你是主工程项目就没什么说的了，但是如果你瘦身的是sdk，如果主工程已经进行了如上设置，其实你是没必要的，有时候还可能引起异常错误。</p>
+<h3 id="参考-2"><a href="#参考-2" class="headerlink" title="参考"></a>参考</h3><p><a href="http://www.jianshu.com/p/11710e7ab661" target="_blank" rel="external">Xcode中和symbols有关的几个设置</a><br><a href="https://stackoverflow.com/questions/17650138/ios-ipa-file-size-xcode-archive-vs-xcodebuild-command" target="_blank" rel="external">iOS IPA file size - xcode-archive vs. xcodebuild command</a><br><a href="http://blog.csdn.net/dnj630/article/details/7321101" target="_blank" rel="external">crash log调用栈看不到的解决方案(debug symbols不起作用)</a></p>
+<h2 id="三、可执行文件瘦身"><a href="#三、可执行文件瘦身" class="headerlink" title="三、可执行文件瘦身"></a>三、可执行文件瘦身</h2><font color="FE5D4E">必杀技:<a href="https://www.jetbrains.com/objc/download/" target="_blank" rel="external">AppCode</a></font>
+
+<p>维护时间较长的代码，可能会出现废弃的类出现。在代码中，这种无用的文件比较难找，可以通过 linkMap 文件来分析。设置 <code>Project -&gt; Build Settings -&gt; Write Link Map File</code> 为 <code>YES</code>，并设置 <code>Path to Link Map File</code>，build 完后找到 <code>linkMap</code> 文件，来分析该文件，该文件默认位于<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">~/Library/Developer/Xcode/DerivedData/XXX-eumsvrzbvgfofvbfsoqokmjprvuh/Build/Intermediates/XXX.build/Debug-iphoneos/XXX.build/</div></pre></td></tr></table></figure></p>
+<p>该文件的介绍，可以参考下 <a href="http://blog.cnbang.net/tech/2296/" target="_blank" rel="external">这里</a></p>
+<h3 id="1-无用类"><a href="#1-无用类" class="headerlink" title="1.无用类"></a>1.无用类</h3><p><strong>方案一：</strong><br>以往C++在链接时，没有被用到的类和方法是不会编进可执行文件里。但Objctive-C不同，由于它的动态性，它可以通过类名和方法名获取这个类和方法进行调用，所以编译器会把项目里所有OC源文件编进可执行文件里，哪怕该类和方法没有被使用到。</p>
+<p>结合LinkMap文件的<strong>TEXT.</strong>text，通过正则表达式([+|-][.+\s(.+)])，我们可以提取当前可执行文件里所有objc类方法和实例方法（SelectorsAll）。再使用otool命令otool -v -s <strong>DATA </strong>objc_selrefs逆向<strong>DATA.</strong>objc_selrefs段，提取可执行文件里引用到的方法名（UsedSelectorsAll），我们可以大致分析出SelectorsAll里哪些方法是没有被引用的（SelectorsAll-UsedSelectorsAll）。注意，系统API的Protocol可能被列入无用方法名单里，如UITableViewDelegate的方法，我们只需要对这些Protocol里的方法加入白名单过滤即可。</p>
+<p>另外第三方库的无用selector也可以这样扫出来的。</p>
+<blockquote>
+<p>NOTE<br>上面这个是微信提供的<a href="https://mp.weixin.qq.com/s?__biz=MzAwNDY1ODY2OQ==&amp;mid=207986417&amp;idx=1&amp;sn=77ea7d8e4f8ab7b59111e78c86ccfe66&amp;scene=0&amp;key=dffc561732c226510c6c6a2ae7a6c92d2f42b941e05f1e3e8624461eec866b962cf3ee5e02f2f695578cc616a6c429d2&amp;ascene=0&amp;uin=NTk4MzU3OTAw&amp;devicetype=iMac+MacBookPro12%2C1+OSX+OSX+10.10.5+build%2814F27%29&amp;version=11020201&amp;pass_ticket=1IEMaQ6RFKDH5CBSqTcMjggMcTG%2FEP1%2FySQBS3DPQaTtjNPY%2BJcx8V23YHqYtG1V" target="_blank" rel="external">方案</a>，本人试了一下，还是有些复杂的。</p>
+</blockquote>
+<p><strong>方案二：</strong><br>支持第三方库大小统计，在该<a href="https://github.com/kobe1941/shell" target="_blank" rel="external">脚本</a>的基础上，添加了分析 <code>objc-class-ref</code> 段，查找未引用的类的方法，代码点击<a href="https://github.com/alicialy/LTAppThinningScript" target="_blank" rel="external">这里</a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">//使用方法</div><div class="line">node js脚本 linkMap.txt(linkMap的txt文件) -hl</div></pre></td></tr></table></figure></p>
+<p><strong>方案三：</strong><br>这里有一个<a href="https://github.com/yuanzhi545/UnusedClasses" target="_blank" rel="external">脚本工具</a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">python py文件目录 Xcode工程文件根目录</div></pre></td></tr></table></figure></p>
+<p>会将结果以.txt的方式存储在Xcode工程文件目录中.</p>
+<blockquote>
+<p>NOTE<br>但是需要注意的是，由于.a以及FrameWork的存在，还有注释等客观因素存在，扫描出来的结果仅供参考，还需要仔细甄别。</p>
+</blockquote>
+<h3 id="2-无用方法"><a href="#2-无用方法" class="headerlink" title="2.无用方法"></a>2.无用方法</h3><p>查找无用oc类有两种方式，一种是类似于查找无用资源，通过搜索”[ClassName alloc/new”、”ClassName *”、”[ClassName class]”等关键字在代码里是否出现。另一种是通过otool命令逆向<strong>DATA.</strong>objc_classlist段和<strong>DATA.</strong>objc_classrefs段来获取当前所有oc类和被引用的oc类，两个集合相减就是无用oc类。</p>
+<p><strong>方案1</strong><br>使用Python脚本，通过对执行文件（我们编译wan），<a href="https://github.com/nst/objc_cover" target="_blank" rel="external">objc_cover</a></p>
+<p><strong>方案2</strong><br><a href="https://github.com/ming1016/SMCheckProject" target="_blank" rel="external">使用Swift3开发了个macOS的程序可以检测出objc项目中无用方法，然后一键全部清理</a></p>
+<h3 id="3-扫描重复代码"><a href="#3-扫描重复代码" class="headerlink" title="3. 扫描重复代码"></a>3. 扫描重复代码</h3><p>可以利用第三方工具<a href="https://github.com/google/simian" target="_blank" rel="external">simian</a>扫描。南非支付copy代码就是这样被发现的。但除此成果之外，扫描出来的结果过多，重构起来也不方便，不如砍功能需求效果好。</p>
+<h3 id="4-功能重复的第三方库"><a href="#4-功能重复的第三方库" class="headerlink" title="4.功能重复的第三方库"></a>4.功能重复的第三方库</h3><p>比如model层的mantle和realm，JsonKit和SBJson等功能类似的只需要一个就好，或者直接用系统自带的Json序列化工具。可以肉眼扫描也可以自己写脚本去扫描。如果使用了Cocoapods来管理第三方库的话，查询起来会更方便一些。</p>
+<h3 id="5-空函数及默认实现的函数都可以删掉"><a href="#5-空函数及默认实现的函数都可以删掉" class="headerlink" title="5.空函数及默认实现的函数都可以删掉"></a>5.空函数及默认实现的函数都可以删掉</h3><p>有些函数只是实现了一个<code>[super function]</code>,例如<code>didReciveMemoryWarning</code>，或者<code>viewDidAppear</code>如果没做额外的处理其实都是可以删除的。</p>
+<h3 id="6-第三方静态库或动态库的架构"><a href="#6-第三方静态库或动态库的架构" class="headerlink" title="6.第三方静态库或动态库的架构"></a>6.第三方静态库或动态库的架构</h3><p>这个其实不用做的，做了之后只是减小了你提供给别人的包的大小，在主应用编译的时候会自动把静态库中不需要的架构去掉的。xcode这一点做的还是比较智能的。</p>
+<h3 id="6-iOS瘦身之删除无用的mach-O文件"><a href="#6-iOS瘦身之删除无用的mach-O文件" class="headerlink" title="6. iOS瘦身之删除无用的mach-O文件"></a>6. iOS瘦身之删除无用的mach-O文件</h3><p>以下内容参考<a href="https://mp.weixin.qq.com/s?__biz=MzA3ODg4MDk0Ng==&amp;mid=2651112096&amp;idx=1&amp;sn=ce8fccce7d5f70e30c078e63e8ea0d15#rd" target="_blank" rel="external">iOS瘦身之删除无用的mach-O文件</a></p>
+<ol>
+<li>category是需要过滤的， 这货有点特别</li>
+<li>删除找出来的.o文件之后， 可能会引起一些特殊的情况， 当然一般是crash， 因为有一些特别的代码他们用法并不是直接引用某个方法， 而是通过NSString相关的方法来获得Sel或者Class</li>
+<li>把查找.o文件的操作放在本地， 而在编译器上进行编译的时候就直接执行删除， 不占用编译器的时间（我们的项目要使用六个小时以上的时间来进行查找）</li>
+<li>建议进行操作再跑一遍回归测试， 确保各个功能模块正常</li>
+</ol>
+<blockquote>
+<p>NOTE<br>这种方式风险较大，不建议仓促下使用。</p>
+</blockquote>
+<h3 id="7-统计项目中各工程在可执行文件的大小占比"><a href="#7-统计项目中各工程在可执行文件的大小占比" class="headerlink" title="7.统计项目中各工程在可执行文件的大小占比"></a>7.统计项目中各工程在可执行文件的大小占比</h3><p>项目里会引入很多第三方静态库，如果能知道这些第三方库在可执行文件里占用的大小，就可以评估是否值得去找替代方案去掉这个第三方库。我们可以从linkmap中统计出这个信息，对此写了个node.js脚本，可以通过linkmap统计每个.o目标文件占用的体积和每个.a静态库占用的体积。</p>
+<p><strong>第一种：</strong><br>采用<a href="https://gist.github.com/bang590/8f3e9704f1c2661836cd" target="_blank" rel="external">node + js</a> 的方式分析,过大的可以考虑缩减和替换<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">node js文件路径 xxlinkmapxxx.txt路径 -hl</div></pre></td></tr></table></figure></p>
+<blockquote>
+<p>NOTE<br>这种方式可能需要装node。</p>
+</blockquote>
+<p><strong>第二种：</strong><br><a href="http://www.jianshu.com/p/bcc7ba20f900" target="_blank" rel="external">采用python脚本</a></p>
+<p><strong>第三种：</strong><br><a href="https://github.com/huanxsd/LinkMap" target="_blank" rel="external">LinkMap解析工具,检查每个类占用大小</a></p>
+<h2 id="四、大致流程思路"><a href="#四、大致流程思路" class="headerlink" title="四、大致流程思路"></a>四、大致流程思路</h2><figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="http://www.zoomfeng.com/images/2016/10/12/4.png" alt="" title="">
+                </div>
+                <div class="image-caption"></div>
+            </figure>
+<blockquote>
+<p>NOTE<br>为了防止上面的脚本在访问的时候失效，特地做了备份，失效了可以访问我的<a href="https://github.com/MarkdownImages/MarkdownImages/tree/master/iOS%E5%BC%80%E5%8F%91/app%E7%98%A6%E8%BA%AB" target="_blank" rel="external">git地址</a></p>
+</blockquote>
+<h2 id="参考-3"><a href="#参考-3" class="headerlink" title="参考"></a>参考</h2><p><a href="http://tmq.qq.com/2016/11/mobileapp_reduceprogram-2/" target="_blank" rel="external">手机APP安装包缩减方案</a><br><a href="https://github.com/LeoMobileDeveloper/Blogs/blob/master/iOS/iOS%E7%BC%96%E8%AF%91%E8%BF%87%E7%A8%8B%E7%9A%84%E5%8E%9F%E7%90%86%E5%92%8C%E5%BA%94%E7%94%A8.md" target="_blank" rel="external">iOS编译过程的原理和应用</a><br><a href="http://blog.cnbang.net/tech/2544/" target="_blank" rel="external">iOS可执行文件瘦身方法</a><br><a href="https://github.com/Damonvvong/iOSDevNotes/blob/master/Notes/AppBetter_1.md" target="_blank" rel="external">我的 App 『减肥计划』(一)</a><br><a href="http://www.zoomfeng.com/blog/ipa-size-thin.html" target="_blank" rel="external">《iOS安装包瘦身指南》</a><br><a href="https://mp.weixin.qq.com/s?__biz=MzAwNDY1ODY2OQ==&amp;mid=207986417&amp;idx=1&amp;sn=77ea7d8e4f8ab7b59111e78c86ccfe66&amp;scene=0&amp;key=dffc561732c226510c6c6a2ae7a6c92d2f42b941e05f1e3e8624461eec866b962cf3ee5e02f2f695578cc616a6c429d2&amp;ascene=0&amp;uin=NTk4MzU3OTAw&amp;devicetype=iMac+MacBookPro12%2C1+OSX+OSX+10.10.5+build(14F27" target="_blank" rel="external">iOS微信安装包瘦身</a>&amp;version=11020201&amp;pass_ticket=1IEMaQ6RFKDH5CBSqTcMjggMcTG%2FEP1%2FySQBS3DPQaTtjNPY%2BJcx8V23YHqYtG1V)<br><a href="http://www.ctolib.com/topics-65758.html" target="_blank" rel="external">总结下在iOS瘦身上的一些方向和优化点</a><br><a href="https://techblog.toutiao.com/2016/12/27/iphone/" target="_blank" rel="external">iPhone安装包的优化</a></p>
+
+        </div>
+
+        <blockquote class="post-copyright">
+    <div class="content">
+        
+<span class="post-time">
+    最后更新时间：<time datetime="2017-06-20T02:42:24.718Z" itemprop="dateUpdated">2017-06-20 10:42:24</time>
+</span><br>
+
+
+        
+        欢迎打赏！
+        
+    </div>
+    <footer>
+        <a href="https://markdownimages.github.io">
+            <img src="/img/avatar.jpg" alt="祥子">
+            祥子
+        </a>
+    </footer>
+</blockquote>
+
+        
+<div class="page-reward">
+    <a id="rewardBtn" href="javascript:;" class="page-reward-btn waves-effect waves-circle waves-light">赏</a>
+</div>
+
+
+
+        <div class="post-footer">
+            
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/优化/">优化</a></li></ul>
+
+
+            
+<div class="page-share-wrap">
+    
+
+<div class="page-share" id="pageShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://markdownimages.github.io/2017/06/20/技术文档/iOS/框架技术/安装包瘦身/&title=《安装包瘦身》 — ZXWalk&pic=https://markdownimages.github.io/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://markdownimages.github.io/2017/06/20/技术文档/iOS/框架技术/安装包瘦身/&title=《安装包瘦身》 — ZXWalk&source=我是一只小小小小鸟......" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://markdownimages.github.io/2017/06/20/技术文档/iOS/框架技术/安装包瘦身/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《安装包瘦身》 — ZXWalk&url=https://markdownimages.github.io/2017/06/20/技术文档/iOS/框架技术/安装包瘦身/&via=https://markdownimages.github.io" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://markdownimages.github.io/2017/06/20/技术文档/iOS/框架技术/安装包瘦身/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+
+    <a href="javascript:;" id="shareFab" class="page-share-fab waves-effect waves-circle">
+        <i class="icon icon-share-alt icon-lg"></i>
+    </a>
+</div>
+
+
+
+        </div>
+    </div>
+
+    
+<nav class="post-nav flex-row flex-justify-between flex-row-reverse">
+  
+
+  
+    <div class="waves-block waves-effect next">
+      <a href="/2017/06/19/技术文档/iOS/工具/git的使用/" id="post-next" class="post-nav-link">
+        <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
+        <h4 class="title">git的使用</h4>
+      </a>
+    </div>
+  
+</nav>
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+<div id="reward" class="page-modal reward-lay">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <h3 class="reward-title">
+        <i class="icon icon-quote-left"></i>
+        谢谢大爷~
+        <i class="icon icon-quote-right"></i>
+    </h3>
+    <ul class="reward-items">
+        
+        <li>
+            <img src="/img/wechat.jpg" title="微信打赏二维码" alt="微信打赏二维码">
+            <p>微信</p>
+        </li>
+        
+
+        
+        <li>
+            <img src="/img/alipay.jpg" title="支付宝打赏二维码" alt="支付宝打赏二维码">
+            <p>支付宝</p>
+        </li>
+        
+    </ul>
+</div>
+
+
+
+</div>
+
+        <footer class="footer">
+    <div class="top">
+        
+<p>
+    <span id="busuanzi_container_site_uv" style='display:none'>
+        站点总访客数：<span id="busuanzi_value_site_uv"></span>
+    </span>
+    <span id="busuanzi_container_site_pv" style='display:none'>
+        站点总访问量：<span id="busuanzi_value_site_pv"></span>
+    </span>
+</p>
+
+
+        <p>
+            
+                <span><a href="/atom.xml" target="_blank" class="rss" title="rss"><i class="icon icon-lg icon-rss"></i></a></span>
+            
+            <span>博客内容遵循<a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">知识共享 署名 - 非商业性 - 相同方式共享 4.0 国际协议</a></span>
+        </p>
+    </div>
+    <div class="bottom">
+        <p>
+            <span>Power by <a href="http://hexo.io/" target="_blank">Hexo</a> Theme <a href="https://github.com/yscoder/hexo-theme-indigo" target="_blank">indigo</a></span>
+            <span>祥子 &copy; 2015 - 2017</span>
+        </p>
+    </div>
+</footer>
+
+    </main>
+    <div class="mask" id="mask"></div>
+<a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-chevron-up"></span></a>
+
+
+
+<div class="global-share" id="globalShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://markdownimages.github.io/2017/06/20/技术文档/iOS/框架技术/安装包瘦身/&title=《安装包瘦身》 — ZXWalk&pic=https://markdownimages.github.io/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://markdownimages.github.io/2017/06/20/技术文档/iOS/框架技术/安装包瘦身/&title=《安装包瘦身》 — ZXWalk&source=我是一只小小小小鸟......" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://markdownimages.github.io/2017/06/20/技术文档/iOS/框架技术/安装包瘦身/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《安装包瘦身》 — ZXWalk&url=https://markdownimages.github.io/2017/06/20/技术文档/iOS/框架技术/安装包瘦身/&via=https://markdownimages.github.io" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://markdownimages.github.io/2017/06/20/技术文档/iOS/框架技术/安装包瘦身/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+<div class="page-modal wx-share" id="wxShare">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAPYAAAD2CAAAAADAeSUUAAADQUlEQVR42u3aSW7jQBAEQP//0xrA1xlRmVUaQGwFT4bMpaN5KNby8xMfj98jOefv4/qc6/sn5ydrGx7Y2NjYN2E/Lo9nj3lGut6yZ9e2m56s7foFYGNjY5/HTpb73nCVb2X7SqIAjI2Njf2V7CRhuAZfX9Uy2pQGGxsbG7t9ZBJmctgs0GJjY2N/Dzv53L8uBrXXzpabr/NttTRsbGzsj2e3BfpP/vs/9rexsbGxP5L9WBxtkShvJySha6PAxsbGPok9G6OZfe7nC0rukzQwXoiwsbGxj2O3Ld52HOddDYn8hUW1NGxsbOwj2G0Y24e6ZIM2aUmxTmxsbOwj2LOizCx5aLd+Fg6jtWFjY2Mfwd583Ldt4CQJSZ7epk9PGwPY2NjYX8OeDS+2aUa7kiR8Pj0HGxsb+yD25nab1uw+4Wlby0/fOTY2NvZB7Flxf7MR7bjPJpmJEhJsbGzsG7I3jdVZy3bfDNj3bbGxsbFPYrc1llmqkPyetIdniccbSkvY2NjYt2JvBmWS4JeX8pMtS9KPaF4JGxsb++bs2QhO/dE/q3iVpahi07GxsbGPYM/KQEkakGxNe+dZsekfT8HGxsY+jp03dBNkvqykDDTbmheJDTY2NvbR7PazPi/3b8pYbbL0YkOxsbGxj2PPWrNtY7Ut92/AL/6LjY2NfRA7SQDabkMCazc0T4GKohg2Njb2Eew8qOTFozxdaYv+s8Qpes/Y2NjYt2UnhZ5N43ZDmhWY8jITNjY29knsWaEnX9asVdA2hus1YGNjYx/BzsdlNt/wm2HKdw0PRV0RbGxs7BuyZ2nAbIOSzc0L/bP2AzY2Nvap7E34qQdlyo3eNy2wsbGxv4e9/9wvpoTi8LYZJxrWtLCxsbFvzt60afNrk6DSBsX2dWJjY2OfwX6UR9sYbpe4aRsUSRE2Njb2Qex9Qzcfr8l5bYl/HyyxsbGx786eBa22EJ/vd3JtHsBe9EOwsbGxD2LPyjqzZkBerpqdH203NjY29tezk1RhFtKSdm/+3BdNAmxsbOwvY89GJHNAO4KzqqJhY2NjH8eehYS2JZCHnzzUteEQGxsb+zx22+htf5mN8mxGiPImMTY2NvbN2X8A4/YmOVSBFc0AAAAASUVORK5CYII=" alt="微信分享二维码">
+</div>
+
+
+
+
+    <script src="//cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script>
+<script>
+var BLOG = { ROOT: '/', SHARE: true, REWARD: true };
+
+
+
+</script>
+
+<script src="//unpkg.com/hexo-theme-material-indigo@latest/js/main.min.js"></script>
+
+
+<div class="search-panel" id="search-panel">
+    <ul class="search-result" id="search-result"></ul>
+</div>
+<template id="search-tpl">
+<li class="item">
+    <a href="{path}" class="waves-block waves-effect">
+        <div class="title ellipsis" title="{title}">{title}</div>
+        <div class="flex-row flex-middle">
+            <div class="tags ellipsis">
+                {tags}
+            </div>
+            <time class="flex-col time">{date}</time>
+        </div>
+    </a>
+</li>
+</template>
+
+<script src="//unpkg.com/hexo-theme-material-indigo@latest/js/search.min.js" async></script>
+
+
+
+
+
+
+<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+
+
+</body>
+</html>
